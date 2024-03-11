@@ -1,0 +1,16 @@
+@media (min-width: 1200px) and (max-width: 1249px) {
+  .mdLgPadding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    /* margin-left: 0 !important;
+    margin-right: 0 !important; */
+  }
+}
+@media (min-width: 1130px) and (max-width: 1199px) {
+  .mdLgPadding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 35px !important;
+    margin-right: 35px !important;
+  }
+}
