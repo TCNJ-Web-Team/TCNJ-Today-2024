@@ -5,6 +5,7 @@ import TagBoardContent from "./TagBoardContent.tsx";
 import TopNav from "./TopNav.tsx";
 import data from "./assets/app-list.json";
 import "./App.css";
+import AppListing from "./AppListing.tsx";
 const topMenuIcons = data.filter((app) => app.topNav === true);
 
 function App() {
@@ -25,7 +26,19 @@ function App() {
           </h1>
           <TopNav topNavItems={topMenuIcons} />
         </div>
-        <TagBoardContent />
+        <div
+          className="bg-white  border-tcnjyellow 
+    border-l-[15px] border-r-[15px]
+    sm:border-l-[35px] sm:border-r-[35px]
+    border-b-[15px] 
+    sm:border-b-[35px] 
+    "
+        >
+          <div className="bg-white mx-auto py-[50px] px-[35px] md:max-w-[1128px] mdLgPadding relative">
+            <AppListing appList={data} />
+            <TagBoardContent />
+          </div>
+        </div>
 
         {/*       
       <div className="flex flex-wrap">
