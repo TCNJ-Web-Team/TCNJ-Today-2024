@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/bitter": "^5.0.18",
+    "@fontsource-variable/open-sans": "^5.0.27",
+    "@fontsource/chunk-five": "^5.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

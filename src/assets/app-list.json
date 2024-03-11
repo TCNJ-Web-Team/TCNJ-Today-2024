@@ -1,0 +1,189 @@
+[
+  {
+    "id": 0,
+    "name": "Google Apps",
+    "url": "http://mail.tcnj.edu/",
+    "topNav": true
+  },
+  {
+    "id": 1,
+    "name": "Canvas",
+    "url": "https://tcnj.instructure.com/login",
+    "topNav": true
+  },
+  {
+    "id": 2,
+    "name": "PAWS",
+    "url": "https://sso-9af1696c.sso.duosecurity.com/saml2/sp/DI4MGFZILBCQCED5WZIV/sso",
+    "topNav": true
+  },
+  {
+    "id": 3,
+    "name": "Oracle Cloud",
+    "url": "https://sso-9af1696c.sso.duosecurity.com/saml2/sp/DIKUZD7UDUNCUNNOAZIU/sso",
+    "topNav": true
+  },
+  {
+    "id": 4,
+    "name": "Taleo",
+    "url": "https://tcnj.taleo.net/",
+    "topNav": false
+  },
+  {
+    "id": 5,
+    "name": "IT Help Desk",
+    "url": "https://tcnj.teamdynamix.com/TDClient/Home/",
+    "topNav": false
+  },
+  {
+    "id": 6,
+    "name": "Work Order",
+    "url": "https://tcnj.teamdynamix.com/TDClient/3283/FacilitiesPortal/Home/",
+    "topNav": false
+  },
+  {
+    "id": 7,
+    "name": "HR Portal",
+    "url": "https://tcnj.teamdynamix.com/TDClient/3286/HRPortal/Home/",
+    "topNav": false
+  },
+  {
+    "id": 8,
+    "name": "Payroll Portal",
+    "url": "https://tcnj.teamdynamix.com/TDClient/3277/PayrollPortal/Home/",
+    "topNav": false
+  },
+  {
+    "id": 9,
+    "name": "Account",
+    "url": "https://account.tcnj.edu/",
+    "topNav": false
+  },
+  {
+    "id": 10,
+    "name": "Roar",
+    "url": "https://tcnj.campusapp.com/",
+    "topNav": false
+  },
+  {
+    "id": 11,
+    "name": "Virtual Apps",
+    "url": "https://tcnj.edu/apps",
+    "topNav": false
+  },
+  {
+    "id": 12,
+    "name": "Handshake",
+    "url": "https://tcnj.joinhandshake.com/login",
+    "topNav": false
+  },
+
+  {
+    "id": 14,
+    "name": "Learning",
+    "url": "https://sso-9af1696c.sso.duosecurity.com/saml2/sp/DI3ROWCNJY8KQBR9IUVJ/sso",
+    "topNav": false
+  },
+  {
+    "id": 15,
+    "name": "All Voices",
+    "url": "https://tcnj.allvoices.co/",
+    "topNav": false
+  },
+  {
+    "id": 16,
+    "name": "ADP",
+    "url": "https://sso-9af1696c.sso.duosecurity.com/saml2/sp/DIH7ZF21SB2HH0J08J7K/sso",
+    "topNav": false
+  },
+  {
+    "id": 17,
+    "name": "OWL",
+    "url": "https://tcnj.medicatconnect.com/",
+    "topNav": false
+  },
+  {
+    "id": 18,
+    "name": "CT Dollars",
+    "url": "https://tcnj-sp.transactcampus.com/CTDollars",
+    "topNav": false
+  },
+  {
+    "id": 19,
+    "name": "Get It Card",
+    "url": "https://tcnj-sp.transactcampus.com/GetIT",
+    "topNav": false
+  },
+  {
+    "id": 20,
+    "name": "Qualtrics",
+    "url": "http://tcnj.qualtrics.com/",
+    "topNav": false
+  },
+  {
+    "id": 21,
+    "name": "Student Feedback",
+    "url": "https://login.watermarkinsights.com/saml-initiate/thecollegeofnewjersey",
+    "topNav": false
+  },
+  {
+    "id": 22,
+    "name": "Book-It!",
+    "url": "https://bookit.tcnj.edu/EmsWebApp/",
+    "topNav": false
+  },
+  {
+    "id": 23,
+    "name": "iMedRIS",
+    "url": "https://tcnj.imedris.net/",
+    "topNav": false
+  },
+  {
+    "id": 24,
+    "name": "PrintSense",
+    "url": "https://printing.tcnj.edu/",
+    "topNav": false
+  },
+  {
+    "id": 25,
+    "name": "My Housing",
+    "url": "https://tcnj.starrezhousing.com/StarRezPortalX/InitiateLogin/StarNet.Core.AuthProviders.Shibboleth",
+    "topNav": false
+  },
+  {
+    "id": 26,
+    "name": "Study Abroad",
+    "url": "https://studyabroad.tcnj.edu/index.cfm?FuseAction=Programs.AdvancedSearch",
+    "topNav": false
+  },
+  {
+    "id": 27,
+    "name": "Faculty Process",
+    "url": "https://iam-api.interfolio.com/users/sso_redirect?tenant_id=15624",
+    "topNav": false
+  },
+  {
+    "id": 28,
+    "name": "CITI Program",
+    "url": "https://www.citiprogram.org/index.cfm?pageID=14",
+    "topNav": false
+  },
+  {
+    "id": 29,
+    "name": "Grants",
+    "url": "https://academicgrants.tcnj.edu/how-do-i/",
+    "topNav": false
+  },
+  {
+    "id": 30,
+    "name": "D. Measures",
+    "url": "https://academicaffairs.tcnj.edu/digital-measures/",
+    "topNav": false
+  },
+  {
+    "id": 31,
+    "name": "Concur",
+    "url": "https://travel.tcnj.edu/concur/",
+    "topNav": false
+  }
+]
