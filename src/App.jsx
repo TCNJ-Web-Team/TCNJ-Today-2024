@@ -1,8 +1,10 @@
 // import "./App.css";
+import GlobalFooter from "./GlobalFooter.jsx";
 import GlobalHeader from "./GlobalHeader.jsx";
+import TagBoardContent from "./TagBoardContent.tsx";
 import TopNav from "./TopNav.tsx";
 import data from "./assets/app-list.json";
-
+import "./App.css";
 const topMenuIcons = data.filter((app) => app.topNav === true);
 
 function App() {
@@ -12,7 +14,7 @@ function App() {
       <div id="today-container" className="bg-tcnjyellow">
         <div
           id="top"
-          className="flex justify-between items-center bg-tcnjyellow py-[20px] px-[36px] mx-auto md:max-w-[1128px]"
+          className="flex justify-between items-center bg-tcnjyellow py-[20px] px-[36px]  lg:px-0 mx-auto md:max-w-[1128px] mdLgPadding"
         >
           <h1
             className="font-chunkfive text-[30px] leading-[54px] text-left text-tcnjblue
@@ -23,6 +25,7 @@ function App() {
           </h1>
           <TopNav topNavItems={topMenuIcons} />
         </div>
+        <TagBoardContent />
 
         {/*       
       <div className="flex flex-wrap">
@@ -37,6 +40,7 @@ function App() {
         ))}
       </div> */}
       </div>
+      <GlobalFooter />
     </>
   );
 }
