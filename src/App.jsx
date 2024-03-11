@@ -15,7 +15,7 @@ function App() {
       <div id="today-container" className="bg-tcnjyellow">
         <div
           id="top"
-          className="flex justify-between items-center bg-tcnjyellow py-[20px] px-[36px]  lg:px-0 mx-auto md:max-w-[1128px] mdLgPadding"
+          className="flex justify-between items-center bg-tcnjyellow py-[20px] px-[36px]  lg:px-0 mx-auto md:max-w-[1130px] mdLgPadding"
         >
           <h1
             className="font-chunkfive text-[30px] leading-[54px] text-left text-tcnjblue
@@ -34,7 +34,7 @@ function App() {
     sm:border-b-[35px] 
     "
         >
-          <div className="bg-white mx-auto py-[50px] px-[35px] md:max-w-[1128px] mdLgPadding relative">
+          <div className="bg-white mx-auto py-[50px] px-[35px] md:max-w-[1130px] mdLgPadding relative">
             <AppListing appList={data} />
             <TagBoardContent />
           </div>
