@@ -1,0 +1,501 @@
+$dark-blue: #293f6f;
+$off-white: #fffdf4;
+$domine: "Domine", sans-serif;
+$raleway: "Raleway", sans-serif;
+$xl: 1920px; // Custom size for extra-large screens
+$lg: 1250px; // Custom size for large screens
+$md: 900px;
+$sm: 550px;
+
+$tablet-media-query: 850px;
+$mobile-media-query: 650px;
+
+$dark-tcnj-blue: #293f6f;
+$tcnj-blue: #293f6f;
+$tcnj-grey: #f1f1f1;
+
+$light-tcnj-blue: #9bd0f3;
+$tcnj-dark-grey: #d9d9d9;
+$tcnj-yellow: #fdd700;
+$border-color: #bcbcbc;
+$link-blue: #33739f;
+$light-tcnj-grey: #7684a3;
+$alfa-slab: "Alfa Slab One", Georgia, serif;
+$open-sans: "Open Sans", sans-serif;
+$bitter: "Bitter", serif;
+$domine: "Domine", serif;
+
+.global-nav {
+  background-color: $tcnj-blue;
+  padding: 14px 0;
+
+  @media screen and (max-width: $lg) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  @media screen and (max-width: $md) {
+    .desktop-global-nav-item {
+      display: none;
+    }
+  }
+  .inner {
+    max-width: 1130px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: $sm) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      grid-gap: 14px;
+      gap: 14px;
+      margin: 15px 30px;
+    }
+    #tcnj-logo {
+      min-height: 42px;
+    }
+    .nav-menu {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      #open-sidebar-button {
+        cursor: pointer;
+      }
+      a,
+      span {
+        color: white;
+        font-family: $open-sans;
+        font-weight: normal;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        line-height: 0.01px;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+          color: #9ccff0;
+        }
+      }
+    }
+  }
+}
+#global-top-nav {
+  .collapsible-global-nav {
+    // background-color: #f1f1f1;
+    // color: white;
+    cursor: pointer;
+    // padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    // padding: 0 80px;
+    // &:after {
+    //   content: '\002B';
+    //   color: white;
+    //   font-weight: bold;
+    //   float: left;
+    //   margin-right: 25px;
+    // }
+
+    &:after {
+      float: left;
+      margin-right: 5px;
+
+      background-image: url("./menu-icon.svg");
+    }
+
+    &:after {
+      display: inline-block;
+      width: 26px;
+      height: 18px;
+      background-repeat: no-repeat;
+      content: "";
+      // margin-left: -32px;
+      margin-top: 0px;
+      // margin-top: 5px;
+    }
+
+    &.active:after {
+      width: 26px;
+      height: 18px;
+      content: "";
+      margin-top: 0px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-image: url("https://brand.tcnj.edu/wp-content/uploads/sites/11/2023/07/close-button.svg");
+    }
+  }
+  .content {
+    margin-left: 32px;
+    padding: 0 80px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    // background-color: #f1f1f1;
+  }
+  #jump-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: transparent;
+
+    a {
+      color: white;
+      font-family: $open-sans;
+      font-weight: normal;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      line-height: 0.01px;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: transparent;
+    }
+  }
+  #more-info {
+    display: flex;
+    margin: 30px 0 15px;
+  }
+
+  #more-info {
+    display: flex;
+
+    gap: 10px;
+    a {
+      padding: 12px 25px;
+      background: $tcnj-yellow;
+      margin: 0;
+      font-family: $open-sans;
+      font-weight: normal;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      line-height: 20px;
+      color: #2e2e2e;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#interior-nav {
+  background-color: $tcnj-grey;
+  min-height: 60px;
+  .inner {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #jump-links {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    &.shortened {
+      justify-content: flex-start;
+      gap: 66px;
+    }
+    a {
+      font-family: $open-sans;
+      font-weight: normal;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      line-height: 20px;
+      color: #2e2e2e;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.25s;
+      padding: 24px 0;
+      &:hover {
+        color: #33739f;
+        border-bottom: 4px solid #33739f;
+        padding-bottom: 17px;
+      }
+    }
+  }
+  #mobile-program-page-nav {
+    padding: 12px 0;
+    min-height: 36px;
+    .collapsible-menu {
+      background-color: #f1f1f1;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      padding: 0 80px;
+      span,
+      a {
+        font-family: $open-sans;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.06em;
+        line-height: 34.02px;
+      }
+
+      // &:after {
+      //   content: '\002B';
+      //   color: white;
+      //   font-weight: bold;
+      //   float: left;
+      //   margin-right: 25px;
+      // }
+
+      &:after {
+        float: left;
+        margin-right: 5px;
+
+        background-image: url("./menu-icon.svg");
+      }
+
+      &:after {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        background-repeat: no-repeat;
+        content: "";
+        // margin-left: -32px;
+        margin-top: 10px;
+        // margin-top: 5px;
+      }
+
+      &.active:after {
+        width: 26px;
+        height: 26px;
+        content: "";
+        margin-top: 10px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-image: url("https://brand.tcnj.edu/wp-content/uploads/sites/11/2023/07/close-button.svg");
+      }
+    }
+    .content {
+      margin-left: 32px;
+      padding: 0 80px;
+      // max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1f1f1;
+      transition: all 0.25s ease-in-out;
+      line-height: 0;
+      // padding: 0 1em;
+      height: 0;
+      &.active {
+        line-height: 1.5;
+        // padding-top: 1em;
+        // padding-bottom: 1em;
+        height: 250px;
+      }
+    }
+    #jump-links {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      border-top: 1px solid $tcnj-dark-grey;
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+    #more-info {
+      display: flex;
+      margin: 30px 0 15px;
+    }
+  }
+  #more-info {
+    display: flex;
+
+    gap: 10px;
+    a {
+      padding: 12px 25px;
+      background: $tcnj-yellow;
+      margin: 0;
+      font-family: $open-sans;
+      font-weight: normal;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      line-height: 20px;
+      color: #2e2e2e;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.25s;
+      &:hover {
+        background: #eabd00;
+        // color: #fff;
+      }
+    }
+  }
+}
+#slider-container {
+  //   hide slider till needed
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  height: 100vh;
+  z-index: 10000;
+  width: 110%;
+  margin-left: -10%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s;
+  #close-button {
+    width: 25px;
+    height: 25px;
+    // content: "";
+    margin-top: 7px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    // background-image: url("https://brand.tcnj.edu/wp-content/uploads/sites/11/2023/07/close-button.svg");
+    top: 20px;
+    right: 445px;
+    position: fixed;
+    z-index: 2000;
+    // pointer-events: none;
+    cursor: pointer;
+    @media screen and (max-width: $sm) {
+      right: 0;
+      left: 20px;
+    }
+  }
+  // &:before {
+  //   width: 25px;
+  //   height: 25px;
+  //   content: "";
+  //   margin-top: 7px;
+  //   display: inline-block;
+  //   background-repeat: no-repeat;
+  //   background-size: 25px;
+  //   background-image: url("https://brand.tcnj.edu/wp-content/uploads/sites/11/2023/07/close-button.svg");
+  //   top: 20px;
+  //   right: 445px;
+  //   position: fixed;
+  //   z-index: 2000;
+  //   // pointer-events: none;
+  //   cursor: pointer;
+  // }
+
+  .search-icon {
+    border: 1px solid #eaeaea;
+    background: url("https://brand.tcnj.edu/wp-content/uploads/sites/11/2018/10/search30.png")
+      left no-repeat;
+    color: #eaeaea;
+    font-size: 18px;
+    padding: 10px 0;
+    text-indent: 30px;
+    min-width: 300px;
+    font-weight: 400;
+    font-family: $open-sans;
+    @media screen and (max-width: $sm) {
+      min-width: inherit;
+      width: 100%;
+    }
+  }
+  .flex-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    a {
+      text-decoration: none;
+
+      flex: 1 1 auto;
+      // background: red;
+      position: relative;
+      text-align: center;
+      line-height: 15px;
+      @media screen and (max-width: $sm) {
+        font-size: 15px !important;
+      }
+    }
+
+    a + a {
+      border-left: solid 1px white;
+    }
+    &#social-icons {
+      max-width: 175px;
+      margin: 0 auto;
+      // padding-top: 40px;
+      a + a {
+        border-left: none;
+      }
+    }
+  }
+  #SearchButton {
+    display: none;
+  }
+  #nav-container {
+    height: 100vh;
+    background-color: #293f6f;
+    right: 0;
+    max-width: 400px;
+    position: fixed;
+    width: 100%;
+    padding: 60px;
+    transition: all 0.2s;
+    transform: translateX(20%);
+    @media screen and (max-width: $sm) {
+      width: 80%;
+      padding: 30px 7.5%;
+      max-width: initial;
+    }
+    #slider-nav {
+      display: flex;
+      flex-direction: column;
+      a {
+        color: white;
+        @media screen and (max-width: $sm) {
+          font-size: 18px;
+        }
+        &:hover {
+          // text-decoration: none;
+          color: #9ccff0;
+        }
+      }
+    }
+  }
+  .global-nav-panel {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 24px;
+      display: block;
+      border-top: 1px solid white;
+      padding: 10px 0;
+      text-decoration: none;
+      text-align: center;
+
+      font-family: $domine;
+      // font-weight: 200;
+    }
+  }
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+    #nav-container {
+      transform: translateX(0%);
+    }
+  }
+}
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+.tcnj-global-search-panel {
+  margin-bottom: 50px;
+  @media screen and (max-width: $sm) {
+    margin-bottom: 25px;
+  }
+}
