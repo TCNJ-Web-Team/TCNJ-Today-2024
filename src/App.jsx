@@ -31,10 +31,14 @@ function App() {
     border-l-[15px] border-r-[15px]
     sm:border-l-[35px] sm:border-r-[35px]
     border-b-[15px] 
-    sm:border-b-[35px] 
+    sm:border-b-[35px]  min-h-[2700px] sm:min-h-0
     "
         >
-          <div className="bg-white mx-auto py-[50px] px-[35px] md:max-w-[1130px] mdLgPadding relative">
+          <div
+            className="bg-white mx-auto py-[50px] px-[35px] md:max-w-[1130px] mdLgPadding relative
+         
+          "
+          >
             <AppListing appList={data} />
             <TagBoardContent />
           </div>
