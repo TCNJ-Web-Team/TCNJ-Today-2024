@@ -36,6 +36,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
           cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
         target="_blank"
         onClick={toggleAppMenu}
+        id="all-apps"
       >
         <img
           src="/icons/all-apps.svg"
