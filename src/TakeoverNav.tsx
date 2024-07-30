@@ -94,14 +94,10 @@ export default function TakeoverNav() {
                   // Category without items
                   return (
                     <motion.a
-                      className="icon-link text-center leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] block"
+                      className="text-left leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] block"
                       target="_blank"
                       href={category.link}
                       key={category.name}
-                      variants={{
-                        hidden: { opacity: 0, x: 15 },
-                        show: { opacity: 1, x: 0 },
-                      }}
                     >
                       {category.name}
                     </motion.a>
