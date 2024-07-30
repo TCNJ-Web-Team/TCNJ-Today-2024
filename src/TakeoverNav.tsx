@@ -77,7 +77,7 @@ export default function TakeoverNav() {
                       </h2>
                       <AnimatePresence>
                         <motion.div
-                          className="text-left w-[50%]"
+                          className="text-left w-[50%] absolute  right-0"
                           initial="hidden"
                           animate={navCategory === index ? "show" : "hidden"}
                           variants={{
@@ -99,7 +99,7 @@ export default function TakeoverNav() {
                                       font-bold text-[#000000] text-[24px] leading-[30px]"
                                 key={item.title}
                                 variants={{
-                                  hidden: { opacity: 0, x: 15 },
+                                  hidden: { opacity: 0, x: -15 },
                                   show: { opacity: 1, x: 0 },
                                 }}
                               >
@@ -112,7 +112,7 @@ export default function TakeoverNav() {
                                 href={item.url ?? "#"}
                                 key={item.title}
                                 variants={{
-                                  hidden: { opacity: 0, x: 15 },
+                                  hidden: { opacity: 0, x: -45 },
                                   show: { opacity: 1, x: 0 },
                                 }}
                               >
