@@ -27,7 +27,12 @@ export default function TakeoverNav() {
             id="nav-takeover-list"
             className="w-[100%] h-[100%] bg-white bg-opacity-95 absolute top-0 left-0 z-10"
           >
-            MENU GOES HERE
+            <div
+              id="inner-takeover-nav"
+              className="mx-auto py-[50px]  md:max-w-[1130px] mdLgPadding relative"
+            >
+              MENU GOES HERE
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
