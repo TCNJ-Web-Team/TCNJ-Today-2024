@@ -11,7 +11,6 @@ interface AppListingProps {
 import useStore from "./store/menusStore";
 
 const AppListing: React.FC<AppListingProps> = ({ appList }) => {
-  const { showSiteMenu, toggleSiteMenu } = useStore();
   const { showAppMenu, toggleAppMenu } = useStore();
   // console.log(appList);
   return (
