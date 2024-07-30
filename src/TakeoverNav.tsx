@@ -62,28 +62,32 @@ export default function TakeoverNav() {
               id="inner-takeover-nav"
               className="mx-auto py-[50px] md:max-w-[1130px] mdLgPadding relative"
             >
-              {navList.map((category) => {
+              {navList.map((category, index) => {
                 if (hasItems(category)) {
                   // Category with items
                   return (
-                    <div key={category.name}>
-                      <h2 className="text-left text-lg font-bold">
+                    <div key={category.name} className="flex flex-row">
+                      <h2 className="text-left text-lg font-bold w-[50%]">
                         {category.name}
+                        <br />
+                        {index}
                       </h2>
-                      {category.items.map((item) => (
-                        <motion.a
-                          className="icon-link text-center leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] block"
-                          target="_blank"
-                          href={item.url ?? "#"}
-                          key={item.title}
-                          variants={{
-                            hidden: { opacity: 0, x: 15 },
-                            show: { opacity: 1, x: 0 },
-                          }}
-                        >
-                          {item.title}
-                        </motion.a>
-                      ))}
+                      <div className="text-left  w-[50%]">
+                        {category.items.map((item) => (
+                          <motion.a
+                            className="submenu-link text-left leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] block"
+                            target="_blank"
+                            href={item.url ?? "#"}
+                            key={item.title}
+                            variants={{
+                              hidden: { opacity: 0, x: 15 },
+                              show: { opacity: 1, x: 0 },
+                            }}
+                          >
+                            {item.title}
+                          </motion.a>
+                        ))}
+                      </div>
                     </div>
                   );
                 } else {

@@ -7,6 +7,7 @@ interface StoreState {
   showAppMenu: boolean;
   toggleAppMenu: () => void;
   closeAppMenu: () => void;
+  navCategory: number;
 }
 
 const useStore = create<StoreState>((set, get) => ({
@@ -16,6 +17,7 @@ const useStore = create<StoreState>((set, get) => ({
   showAppMenu: false,
   toggleAppMenu: () => set((state) => ({ showAppMenu: !state.showAppMenu })),
   closeAppMenu: () => set((state) => ({ showAppMenu: false })),
+  navCategory: 0,
 }));
 
 export default useStore;
