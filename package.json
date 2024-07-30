@@ -13,8 +13,10 @@
     "@fontsource-variable/bitter": "^5.0.18",
     "@fontsource-variable/open-sans": "^5.0.27",
     "@fontsource/chunk-five": "^5.0.7",
+    "framer-motion": "^11.3.19",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

@@ -11,6 +11,9 @@ export default {
         sm: "550px", // Custom size for small screens
         // xs: "430px", // Custom size for extra-small screens
       },
+      boxShadow: {
+        "3xl": "5px 5px 10px rgba(0, 0, 0, 0.16)",
+      },
       backgroundImage: {
         yellowWhiteGradient: "linear-gradient(#FDD700 90%, white 90%)",
       },

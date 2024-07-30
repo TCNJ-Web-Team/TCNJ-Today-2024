@@ -5,16 +5,19 @@ import TagBoardContent from "./TagBoardContent.tsx";
 import TopNav from "./TopNav.tsx";
 import data from "./assets/app-list.json";
 import "./App.css";
+import AppListing from "./AppListing.tsx";
+import StaggeredList from "./StaggeredTest.tsx";
 const topMenuIcons = data.filter((app) => app.topNav === true);
 
 function App() {
   return (
     <>
+      <StaggeredList />
       <GlobalHeader />
       <div id="today-container" className="bg-tcnjyellow">
         <div
           id="top"
-          className="flex justify-between items-center bg-tcnjyellow py-[20px] px-[36px]  lg:px-0 mx-auto md:max-w-[1128px] mdLgPadding"
+          className="flex justify-between items-center bg-tcnjyellow py-[20px] px-[36px]  lg:px-0 mx-auto md:max-w-[1130px] mdLgPadding"
         >
           <h1
             className="font-chunkfive text-[30px] leading-[54px] text-left text-tcnjblue
@@ -25,7 +28,23 @@ function App() {
           </h1>
           <TopNav topNavItems={topMenuIcons} />
         </div>
-        <TagBoardContent />
+        <div
+          className="bg-white  border-tcnjyellow 
+    border-l-[15px] border-r-[15px]
+    sm:border-l-[35px] sm:border-r-[35px]
+    border-b-[15px] 
+    sm:border-b-[35px]  min-h-[2700px] sm:min-h-0
+    "
+        >
+          <div
+            className="bg-white mx-auto py-[50px] px-[35px] md:max-w-[1130px] mdLgPadding relative
+         
+          "
+          >
+            <AppListing appList={data} />
+            <TagBoardContent />
+          </div>
+        </div>
 
         {/*       
       <div className="flex flex-wrap">
