@@ -1,0 +1,41 @@
+// Add these styles to your .scss file
+.icon-link {
+  position: relative;
+  display: inline-block;
+
+  .outline-icon,
+  .color-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .outline-icon {
+    opacity: 1;
+  }
+
+  .color-icon {
+    opacity: 0;
+  }
+  p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  &:hover {
+    .outline-icon {
+      opacity: 0;
+    }
+
+    .color-icon {
+      opacity: 1;
+    }
+    // p {
+    //   text-decoration: underline;
+    // }
+  }
+}

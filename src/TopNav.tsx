@@ -32,7 +32,8 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
         </a>
       ))}
       <a
-        className="text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
+        className="
+          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
         target="_blank"
         onClick={toggleAppMenu}
       >
@@ -44,7 +45,8 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
         All Apps
       </a>
       <a
-        className="text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
+        className="
+          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
         target="_blank"
         onClick={toggleSiteMenu}
       >

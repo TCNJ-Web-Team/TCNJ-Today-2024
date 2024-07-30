@@ -6,13 +6,13 @@ import TopNav from "./TopNav.tsx";
 import data from "./assets/app-list.json";
 import "./App.css";
 import AppListing from "./AppListing.tsx";
-import StaggeredList from "./StaggeredTest.tsx";
+// import StaggeredList from "./StaggeredTest.tsx";
 const topMenuIcons = data.filter((app) => app.topNav === true);
 
 function App() {
   return (
     <>
-      <StaggeredList />
+      {/* <StaggeredList /> */}
       <GlobalHeader />
       <div id="today-container" className="bg-tcnjyellow">
         <div
