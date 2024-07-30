@@ -26,9 +26,11 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       }}
       id="app-list"
       className="absolute top-0 left-0 w-[100%] max-h-[100%] bg-[rgba(255,255,255,0.95)]
-      grid grid-cols-2 shadow-3xl border-[1px] border-[#e0e0e0]
-      pt-[47px] pb-[200px] gap-y-[60px] sm:top-[10px] sm:grid-cols-3 sm:w-[655px] 
-      md:w-[630px] md:left-auto md:right-0"
+      grid grid-cols-2  shadow-3xl border-[1px] border-[#e0e0e0]
+      pt-[47px] pb-[200px]
+      gap-y-[60px]  
+      sm:top-[10px] sm:grid-cols-3  sm:w-[655px] sm:h-[708px]
+      md:w-[630px] md:max-h-[708px]  md:left-auto md:right-0"
     >
       {appList.map((item) => (
         <motion.a
