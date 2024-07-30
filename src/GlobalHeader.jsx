@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 // import "../styles/accordion-styles.scss";
 import "./styles/global-nav.scss";
+
 export default function GlobalHeader() {
   const [open, setOpen] = useState(false);
   const openSideNav = () => {
