@@ -35,7 +35,8 @@ function hasItems(category: Category): category is CategoryWithItems {
 }
 
 export default function TakeoverNav() {
-  const { showSiteMenu, toggleSiteMenu } = useStore();
+  const { showSiteMenu, toggleSiteMenu, navCategory, setNavCategory } =
+    useStore();
 
   return (
     <>
@@ -51,7 +52,7 @@ export default function TakeoverNav() {
               show: {
                 opacity: 1,
                 y: 0,
-                transition: { staggerChildren: 0.0651 },
+                // transition: { staggerChildren: 0.0651 },
               },
             }}
             exit={{ opacity: 0 }}
@@ -67,27 +68,60 @@ export default function TakeoverNav() {
                   // Category with items
                   return (
                     <div key={category.name} className="flex flex-row">
-                      <h2 className="text-left text-lg font-bold w-[50%]">
+                      <h2
+                        className="text-left text-lg font-bold w-[50%]
+                        cursor-pointer"
+                        onClick={() => setNavCategory(index)} // Pass a function reference
+                      >
                         {category.name}
-                        <br />
-                        {index}
                       </h2>
-                      <div className="text-left  w-[50%]">
-                        {category.items.map((item) => (
-                          <motion.a
-                            className="submenu-link text-left leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] block"
-                            target="_blank"
-                            href={item.url ?? "#"}
-                            key={item.title}
-                            variants={{
-                              hidden: { opacity: 0, x: 15 },
-                              show: { opacity: 1, x: 0 },
-                            }}
-                          >
-                            {item.title}
-                          </motion.a>
-                        ))}
-                      </div>
+                      <AnimatePresence>
+                        <motion.div
+                          className="text-left w-[50%]"
+                          initial="hidden"
+                          animate={navCategory === index ? "show" : "hidden"}
+                          variants={{
+                            hidden: {
+                              opacity: 0,
+                            },
+                            show: {
+                              opacity: 1,
+                              y: 0,
+                              transition: { staggerChildren: 0.0651 },
+                            },
+                          }}
+                          exit={{ opacity: 0 }}
+                        >
+                          {category.items.map((item) =>
+                            item.header ? (
+                              <motion.h3
+                                className="submenu-link text-left block
+                                      font-bold text-[#000000] text-[24px] leading-[30px]"
+                                key={item.title}
+                                variants={{
+                                  hidden: { opacity: 0, x: 15 },
+                                  show: { opacity: 1, x: 0 },
+                                }}
+                              >
+                                {item.title}
+                              </motion.h3>
+                            ) : (
+                              <motion.a
+                                className="submenu-link text-left block"
+                                target="_blank"
+                                href={item.url ?? "#"}
+                                key={item.title}
+                                variants={{
+                                  hidden: { opacity: 0, x: 15 },
+                                  show: { opacity: 1, x: 0 },
+                                }}
+                              >
+                                {item.title}
+                              </motion.a>
+                            )
+                          )}
+                        </motion.div>
+                      </AnimatePresence>
                     </div>
                   );
                 } else {
