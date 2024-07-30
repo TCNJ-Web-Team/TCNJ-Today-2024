@@ -22,13 +22,13 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
         hidden: {
           opacity: 0,
           y: -10,
-          transition: {
-            staggerChildren: 0.1,
-            staggerDirection: -1,
-            // Use either when or delay here.
-            // when: "afterChildren",
-            delay: 0.1,
-          },
+          // Add transition to only play once
+          // transition: {
+          //   staggerChildren: 0.1,
+          //   staggerDirection: -1,
+          //   // Use either when or delay here.
+          //   // when: "afterChildren",
+          // },
         },
         show: {
           opacity: 1,
