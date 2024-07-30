@@ -6,9 +6,17 @@ interface TopNavProps {
 import useStore from "./store/menusStore";
 
 const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
-  const { showSiteMenu, toggleSiteMenu } = useStore();
-  const { showAppMenu, toggleAppMenu } = useStore();
+  const { showSiteMenu, toggleSiteMenu, closeSiteMenu } = useStore();
+  const { showAppMenu, toggleAppMenu, closeAppMenu } = useStore();
+  const handleAppMenuClick = () => {
+    toggleAppMenu();
+    closeSiteMenu();
+  };
 
+  const handleSiteMenuClick = () => {
+    toggleSiteMenu();
+    closeAppMenu();
+  };
   return (
     <div className="flex flex-wrap justify-end gap-[25px] lg:gap-[60px]">
       {/* {showSiteMenu && <p>Site Menu</p>}
@@ -33,9 +41,9 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       ))}
       <a
         className="
-          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
+          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000]"
         target="_blank"
-        onClick={toggleAppMenu}
+        onClick={handleAppMenuClick}
         id="all-apps"
       >
         <img
@@ -47,9 +55,10 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       </a>
       <a
         className="
-          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
+          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000]"
         target="_blank"
-        onClick={toggleSiteMenu}
+        onClick={handleSiteMenuClick}
+        id="menu-button"
       >
         <img
           src="/icons/menu-lines.svg"

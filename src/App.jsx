@@ -6,6 +6,7 @@ import TopNav from "./TopNav.tsx";
 import data from "./assets/app-list.json";
 import "./App.css";
 import AppListing from "./AppListing.tsx";
+import TakeoverNav from "./TakeoverNav.tsx";
 // import StaggeredList from "./StaggeredTest.tsx";
 const topMenuIcons = data.filter((app) => app.topNav === true);
 
@@ -30,16 +31,18 @@ function App() {
         </div>
         <div
           className="bg-white  border-tcnjyellow 
-    border-l-[15px] border-r-[15px]
-    sm:border-l-[35px] sm:border-r-[35px]
-    border-b-[15px] 
-    sm:border-b-[35px]  min-h-[2700px] sm:min-h-0
-    "
+          border-l-[15px] border-r-[15px]
+          sm:border-l-[35px] sm:border-r-[35px]
+          border-b-[15px] 
+          sm:border-b-[35px]  min-h-[2700px] sm:min-h-0
+          relative
+          "
         >
+          <TakeoverNav />
           <div
             className="bg-white mx-auto py-[50px] px-[35px] md:max-w-[1130px] mdLgPadding relative
-         
-          "
+            
+            "
           >
             <AppListing appList={data} />
             <TagBoardContent />

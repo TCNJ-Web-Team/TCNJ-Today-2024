@@ -1,0 +1,85 @@
+[
+  {
+    "name": "About",
+    "link": null,
+    "items": [
+      {
+        "title": "Title 1-1",
+        "url": null,
+        "header": true
+      },
+      {
+        "title": "Title 1-2",
+        "url": "https://example.com/1-2"
+      }
+    ]
+  },
+  {
+    "name": "Academics",
+    "link": null,
+    "items": [
+      {
+        "title": "Title 2-1",
+        "url": "https://example.com/2-1"
+      },
+      {
+        "title": "Title 2-2",
+        "url": "https://example.com/2-2"
+      }
+    ]
+  },
+  {
+    "name": "Admissions",
+    "link": null,
+    "items": [
+      {
+        "title": "Title 3-1",
+        "url": "https://example.com/3-1"
+      },
+      {
+        "title": "Title 3-2",
+        "url": "https://example.com/3-2"
+      }
+    ]
+  },
+  {
+    "name": "Campus Life",
+    "link": null,
+    "items": [
+      {
+        "title": "Title 4-1",
+        "url": "https://example.com/4-1"
+      },
+      {
+        "title": "Title 4-2",
+        "url": "https://example.com/4-2"
+      }
+    ]
+  },
+  {
+    "name": "Support",
+    "link": null,
+    "items": [
+      {
+        "title": "Title 5-1",
+        "url": "https://example.com/5-1"
+      },
+      {
+        "title": "Title 5-2",
+        "url": "https://example.com/5-2"
+      }
+    ]
+  },
+  {
+    "name": "Events",
+    "link": "https://tcnj.edu/events/"
+  },
+  {
+    "name": "Directory",
+    "link": "https://tcnj.edu/directories"
+  },
+  {
+    "name": "A-Z",
+    "link": "https://tcnj.edu/a-z/"
+  }
+]
