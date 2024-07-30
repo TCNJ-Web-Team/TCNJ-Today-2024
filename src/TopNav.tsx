@@ -8,6 +8,7 @@ import useStore from "./store/menusStore";
 const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
   const { showSiteMenu, toggleSiteMenu, closeSiteMenu } = useStore();
   const { showAppMenu, toggleAppMenu, closeAppMenu } = useStore();
+  const { setNavCategory } = useStore();
   const handleAppMenuClick = () => {
     toggleAppMenu();
     closeSiteMenu();
@@ -15,6 +16,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
 
   const handleSiteMenuClick = () => {
     toggleSiteMenu();
+    setNavCategory(0);
     closeAppMenu();
   };
   return (
