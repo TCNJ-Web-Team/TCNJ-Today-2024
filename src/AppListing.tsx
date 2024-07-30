@@ -48,7 +48,8 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       {showAppMenu && <p>Site App Menu</p>} */}
       {appList.map((item, index) => (
         <motion.a
-          className="text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
+          className="
+          text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
           target="_blank"
           href={item.url}
           key={item.id}
