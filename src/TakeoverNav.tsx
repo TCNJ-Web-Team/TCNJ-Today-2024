@@ -61,7 +61,7 @@ export default function TakeoverNav() {
           >
             <div
               id="inner-takeover-nav"
-              className="mx-auto py-[50px] md:max-w-[1130px] mdLgPadding relative"
+              className="mx-auto py-[175px] md:max-w-[1130px] mdLgPadding relative"
             >
               {navList.map((category, index) => {
                 if (hasItems(category)) {
@@ -69,8 +69,8 @@ export default function TakeoverNav() {
                   return (
                     <div key={category.name} className="flex flex-row">
                       <h2
-                        className="text-left text-lg font-bold w-[50%]
-                        cursor-pointer"
+                        className="text-left text-lg  w-[50%]
+                        cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] pb-[50px]"
                         onClick={() => setNavCategory(index)} // Pass a function reference
                       >
                         {category.name}
@@ -96,7 +96,7 @@ export default function TakeoverNav() {
                             item.header ? (
                               <motion.h3
                                 className="submenu-link text-left block
-                                      font-bold text-[#000000] text-[24px] leading-[30px]"
+                                      text-[#000000] text-[24px] leading-[30px]"
                                 key={item.title}
                                 variants={{
                                   hidden: { opacity: 0, x: -15 },
@@ -112,7 +112,7 @@ export default function TakeoverNav() {
                                 href={item.url ?? "#"}
                                 key={item.title}
                                 variants={{
-                                  hidden: { opacity: 0, x: -45 },
+                                  hidden: { opacity: 0, x: -15 },
                                   show: { opacity: 1, x: 0 },
                                 }}
                               >
