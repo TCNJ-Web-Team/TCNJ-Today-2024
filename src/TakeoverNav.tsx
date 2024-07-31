@@ -83,20 +83,21 @@ export default function TakeoverNav() {
                           variants={{
                             hidden: {
                               opacity: 0,
+                              zIndex: -1,
                             },
                             show: {
                               opacity: 1,
                               y: 0,
                               transition: { staggerChildren: 0.0651 },
+                              zIndex: 1,
                             },
                           }}
                           exit={{ opacity: 0 }}
                         >
-                          {category.items.map((item) =>
-                            item.header ? (
+                          {category.items.map((item, index) =>
+                            item.header && item.url === null ? (
                               <motion.h3
-                                className="submenu-link text-left block
-                                      text-[#000000] text-[24px] leading-[30px]"
+                                className="submenu-link text-left block text-[#000000] font-interstate font-[900] text-[23px] leading-[50px] uppercase"
                                 key={item.title}
                                 variants={{
                                   hidden: { opacity: 0, x: -15 },
@@ -105,9 +106,28 @@ export default function TakeoverNav() {
                               >
                                 {item.title}
                               </motion.h3>
+                            ) : item.title === "large-break" ? (
+                              // <motion.p
+                              //   className="large-break-class"
+                              //   key={item.title}
+                              //   variants={{
+                              //     hidden: { opacity: 0, x: -15 },
+                              //     show: { opacity: 1, x: 0 },
+                              //   }}
+                              // >
+                              //   ---
+                              //   </motion.p>
+                              <motion.hr
+                                className="w-full border-t-[1px] border-[#CCCCCC] mb-[50px] mt-[40px]"
+                                key={item.title}
+                                variants={{
+                                  hidden: { opacity: 0, x: -15 },
+                                  show: { opacity: 1, x: 0 },
+                                }}
+                              />
                             ) : (
                               <motion.a
-                                className="submenu-link text-left block"
+                                className="submenu-link text-left block font-domine font-[400] text-[#000000] text-[19px] leading-[50px]"
                                 target="_blank"
                                 href={item.url ?? "#"}
                                 key={item.title}
