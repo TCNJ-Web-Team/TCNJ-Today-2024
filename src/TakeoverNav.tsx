@@ -148,7 +148,7 @@ export default function TakeoverNav() {
                   // Category without items
                   return (
                     <motion.a
-                      className="text-left leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] block"
+                      className="text-left font-domine font-[400] text-[#000000] text-[20px] leading-[45px] block"
                       target="_blank"
                       href={category.link}
                       key={category.name}
