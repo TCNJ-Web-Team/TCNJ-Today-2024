@@ -69,7 +69,7 @@ export default function TakeoverNav() {
                   return (
                     <div key={category.name} className="flex flex-row">
                       <h2
-                        className="text-left text-lg  w-[50%]
+                        className="text-left w-[50%]
                         cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] pb-[50px]"
                         onClick={() => setNavCategory(index)} // Pass a function reference
                       >
@@ -84,6 +84,10 @@ export default function TakeoverNav() {
                             hidden: {
                               opacity: 0,
                               zIndex: -1,
+                              // transition: {
+                              //   staggerChildren: 0.0151,
+                              //   staggerDirection: 1,
+                              // },
                             },
                             show: {
                               opacity: 1,
