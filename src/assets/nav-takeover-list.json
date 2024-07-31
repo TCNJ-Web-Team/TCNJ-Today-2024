@@ -14,23 +14,23 @@
       },
       {
         "title": "Mission and History",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://tcnj.edu/about/mission/"
       },
       {
         "title": "National Acclaim",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://tcnj.edu/about/national-acclaim/"
       },
       {
         "title": "Quick Facts",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://tcnj.edu/about/quick-facts/"
       },
       {
         "title": "TCNJ News",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://news.tcnj.edu/"
       },
       {
         "title": "Tuition and Fees",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://studentaccounts.tcnj.edu/tuition-fees/"
       },
       {
         "title": "Executive Leadership",
@@ -39,43 +39,43 @@
       },
       {
         "title": "Academic Affairs / Provost",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://academicaffairs.tcnj.edu/"
       },
       {
         "title": "College Advancement",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://advancement.tcnj.edu/"
       },
       {
         "title": "Enrollment Management",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://em.tcnj.edu/"
       },
       {
         "title": "Inclusive Excellence",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://diversity.tcnj.edu/"
       },
       {
         "title": "General Counsel",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://ogc.tcnj.edu/"
       },
       {
         "title": "Operations",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://operations.tcnj.edu/"
       },
       {
         "title": "President / Cabinet",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://president.tcnj.edu/"
       },
       {
         "title": "Treasurer",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://treasurer.tcnj.edu/"
       },
       {
         "title": "Student Affairs",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://sa.tcnj.edu/"
       },
       {
         "title": "Board of Trustees",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://trustees.tcnj.edu/"
       },
       {
         "title": "Campus Resources",
@@ -84,27 +84,27 @@
       },
       {
         "title": "Accessibility",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://arc.tcnj.edu/"
       },
       {
         "title": "Bias Education and Support",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://equity.tcnj.edu/bias-support/"
       },
       {
         "title": "Campus Police",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://campuspolice.tcnj.edu/"
       },
       {
         "title": "Directory",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://eawebprod.tcnj.edu/directory/"
       },
       {
         "title": "Employment Opportunities",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://careers.tcnj.edu/"
       },
       {
         "title": "Map",
-        "url": "https://tcnj.edu/about/"
+        "url": "https://tcnj.edu/about/campus-info/campus-map/"
       },
       {
         "title": "Offices",
@@ -129,12 +129,104 @@
     "link": null,
     "items": [
       {
-        "title": "Title 2-1",
-        "url": "https://example.com/2-1"
+        "title": "Academic Programs",
+        "url": null,
+        "header": true
+      },
+
+      {
+        "title": "Overview",
+        "url": ""
       },
       {
-        "title": "Title 2-2",
-        "url": "https://example.com/2-2"
+        "title": "Areas of Study / Majors",
+        "url": ""
+      },
+      {
+        "title": "College-Wide Programs",
+        "url": ""
+      },
+      {
+        "title": "Graduate Programs",
+        "url": ""
+      },
+      {
+        "title": "Pathway Program",
+        "url": ""
+      },
+      {
+        "title": "Summer Programs",
+        "url": ""
+      },
+      {
+        "title": "Winter Programs",
+        "url": ""
+      },
+      {
+        "title": "Academic Resources",
+        "url": null,
+        "header": true
+      },
+      {
+        "title": "Academic Calendars",
+        "url": ""
+      },
+      {
+        "title": "Career Center",
+        "url": ""
+      },
+      {
+        "title": "Library",
+        "url": ""
+      },
+      {
+        "title": "Records and Registration",
+        "url": ""
+      },
+      {
+        "title": "Student Success and Retention",
+        "url": ""
+      },
+      {
+        "title": "Transcripts",
+        "url": ""
+      },
+      {
+        "title": "Tutoring Center",
+        "url": ""
+      },
+      {
+        "title": "Schools",
+        "url": null,
+        "header": true
+      },
+      {
+        "title": "Arts and Communication",
+        "url": ""
+      },
+      {
+        "title": "Business",
+        "url": ""
+      },
+      {
+        "title": "Education",
+        "url": ""
+      },
+      {
+        "title": "Engineering",
+        "url": ""
+      },
+      {
+        "title": "Humanities and Social Sciences",
+        "url": ""
+      },
+      {
+        "title": "Nursing and Health Sciences",
+        "url": ""
+      },
+      {
+        "title": "Science",
+        "url": ""
       }
     ]
   },
@@ -143,12 +235,46 @@
     "link": null,
     "items": [
       {
-        "title": "Title 3-1",
-        "url": "https://example.com/3-1"
+        "title": "Admissions",
+        "url": null,
+        "header": true
       },
       {
-        "title": "Title 3-2",
-        "url": "https://example.com/3-2"
+        "title": "Apply | Request Info",
+        "url": ""
+      },
+      {
+        "title": "Undergraduate Admissions",
+        "url": ""
+      },
+      {
+        "title": "Graduate and Continuing Education",
+        "url": ""
+      },
+      {
+        "title": "Transfer Admissions",
+        "url": ""
+      },
+      {
+        "title": "International Admissions",
+        "url": ""
+      },
+      {
+        "title": "Visit TCNJ",
+        "url": null,
+        "header": true
+      },
+      {
+        "title": "Campus Tours",
+        "url": ""
+      },
+      {
+        "title": "Open Houses",
+        "url": ""
+      },
+      {
+        "title": "Virtual Tour",
+        "url": ""
       }
     ]
   },
