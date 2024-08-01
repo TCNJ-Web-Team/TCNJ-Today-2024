@@ -68,6 +68,9 @@ export default function TakeoverNav() {
               className="mx-[35px] sm:mx-auto py-[50px] md:py-[175px] md:max-w-[1130px] mdLgPadding relative"
             >
               {navList.map((category, index) => {
+                const isFirst = index === 0;
+                const isLast = 4;
+                console.log(isLast);
                 if (hasItems(category)) {
                   // Category with items
                   return (
@@ -75,16 +78,24 @@ export default function TakeoverNav() {
                       key={category.name}
                       className={`sm:flex flex-row  
                         
-                     w-full border-b-[1px] border-[#CCCCCC] 
-                        sm:border-b-0
+                     w-full border-t-[1px] border-[#CCCCCC] 
+                        sm:border-t-0
                     sm:h-auto
-                
+                pb-[20px] sm:pb-0
+                    ${isFirst ? "border-t-0" : ""}
+                    ${
+                      index === isLast
+                        ? "border-b-[1px] border-[#CCCCCC]  sm:border-b-0 mb-[35px] sm-mb-0"
+                        : ""
+                    }
                     `}
                     >
                       <div
                         className={`dropdown-container
-                           pt-[35px] pb-[25px]
-                    ${index === 0 ? "pt-0" : ""}
+                           pt-[25px] pb-[25px]
+                    ${index === 0 ? "!pt-0 first-one" : ""}
+                    ${navCategory === index ? "active-arrow" : ""}
+                    mb-[-20px] sm:mb-0
                                            
 
                     sm:py-0
@@ -100,7 +111,7 @@ export default function TakeoverNav() {
                         }}
                       >
                         <motion.h2
-                          className={`*:relative text-left cursor-pointer block font-alfaslab font-normal 
+                          className={`relative text-left cursor-pointer block font-alfaslab font-normal 
                           
                           text-[30px]
                           leading-[40px]
@@ -114,7 +125,7 @@ export default function TakeoverNav() {
                           {category.name}
 
                           <motion.span
-                            className="absolute bottom-[-9px] left-0 h-[3px] bg-[black]"
+                            className="absolute bottom-[-2px] sm:bottom-[-9px] left-0 h-[0px] sm:h-[3px] bg-[black]"
                             initial={{ width: 0 }} // Initial width of the border
                             variants={{
                               hovered: { width: "100%" }, // Full width on hover
