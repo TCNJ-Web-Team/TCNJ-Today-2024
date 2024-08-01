@@ -135,7 +135,7 @@ export default function TakeoverNav() {
                               //   </motion.p>
                               <motion.hr
                                 className="w-full border-t-[1px] border-[#CCCCCC] mb-[50px] mt-[40px]"
-                                key={item.title}
+                                key={index}
                                 variants={{
                                   hidden: { opacity: 0, x: -15 },
                                   show: { opacity: 1, x: 0 },
