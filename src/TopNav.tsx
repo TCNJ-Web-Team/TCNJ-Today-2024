@@ -15,9 +15,18 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
   };
 
   const handleSiteMenuClick = () => {
+    const screenWidth = window.innerWidth;
+
     toggleSiteMenu();
-    setNavCategory(0);
+    // Example for large screens (e.g., desktop)
+
+    setNavCategory("unset");
     closeAppMenu();
+    if (screenWidth > 550) {
+      // Example for large screens (e.g., desktop)
+
+      setNavCategory(0);
+    }
   };
   return (
     <div className="flex flex-wrap justify-end gap-[25px] lg:gap-[60px]">

@@ -35,8 +35,13 @@ function hasItems(category: Category): category is CategoryWithItems {
 }
 
 export default function TakeoverNav() {
-  const { showSiteMenu, toggleSiteMenu, navCategory, setNavCategory } =
-    useStore();
+  const {
+    showSiteMenu,
+    toggleSiteMenu,
+    navCategory,
+    setNavCategory,
+    setNavCategoryDesktop,
+  } = useStore();
 
   return (
     <>
@@ -67,35 +72,55 @@ export default function TakeoverNav() {
                 if (hasItems(category)) {
                   // Category with items
                   return (
-                    <div key={category.name} className="flex flex-row">
-                      <motion.h2
-                        className="relative text-left  cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] w-fit"
-                        onClick={() => setNavCategory(index)} // Pass a function reference
-                        whileTap={{ scale: 0.98 }}
-                        whileHover="hovered" // Reference to hover animation
+                    <div
+                      key={category.name}
+                      className={`sm:flex flex-row  
+                        
+                    
+                    sm:h-auto`}
+                    >
+                      <div
+                        onClick={() => {
+                          const screenWidth = window.innerWidth;
+                          if (screenWidth <= 550) {
+                            const currentCategory = index; // Replace 'index' with the actual category index
+                            setNavCategory(currentCategory);
+                          } else {
+                            setNavCategoryDesktop(index);
+                          }
+                        }}
                       >
-                        {category.name}
+                        <motion.h2
+                          className="relative text-left cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] w-fit"
+                          whileTap={{ scale: 0.98 }}
+                          whileHover="hovered" // Reference to hover animation
+                        >
+                          {category.name}
 
-                        <motion.span
-                          className="absolute  bottom-[-9px] left-0 h-[3px] bg-[black]"
-                          initial={{ width: 0 }} // Initial width of the border
-                          variants={{
-                            hovered: { width: "100%" }, // Full width on hover
-                            unhovered: { width: 0 }, // Reset width when not hovered
-                          }}
-                          transition={{ duration: 0.35 }} // Adjust the animation duration
-                        />
-                      </motion.h2>
+                          <motion.span
+                            className="absolute bottom-[-9px] left-0 h-[3px] bg-[black]"
+                            initial={{ width: 0 }} // Initial width of the border
+                            variants={{
+                              hovered: { width: "100%" }, // Full width on hover
+                              unhovered: { width: 0 }, // Reset width when not hovered
+                            }}
+                            transition={{ duration: 0.35 }} // Adjust the animation duration
+                          />
+                        </motion.h2>
+                      </div>
 
                       <AnimatePresence>
                         <motion.div
-                          className="text-left w-[50%] absolute  right-0"
+                          className={`text-left sm:w-[50%] sm:absolute  right-0
+                            ${navCategory === index ? "h-auto" : "h-[0]"}
+                            `}
                           initial="hidden"
                           animate={navCategory === index ? "show" : "hidden"}
                           variants={{
                             hidden: {
                               opacity: 0,
                               zIndex: -1,
+                              height: 0,
                               // transition: {
                               //   staggerChildren: 0.0151,
                               //   staggerDirection: 1,
@@ -106,6 +131,7 @@ export default function TakeoverNav() {
                               y: 0,
                               transition: { staggerChildren: 0.0651 },
                               zIndex: 1,
+                              height: "auto",
                             },
                           }}
                           exit={{ opacity: 0 }}
