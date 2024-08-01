@@ -68,13 +68,25 @@ export default function TakeoverNav() {
                   // Category with items
                   return (
                     <div key={category.name} className="flex flex-row">
-                      <h2
-                        className="text-left w-[50%]
-                        cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] pb-[50px]"
+                      <motion.h2
+                        className="relative text-left  cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] w-fit"
                         onClick={() => setNavCategory(index)} // Pass a function reference
+                        whileTap={{ scale: 0.98 }}
+                        whileHover="hovered" // Reference to hover animation
                       >
                         {category.name}
-                      </h2>
+
+                        <motion.span
+                          className="absolute bottom-0 left-0 h-[3px] bg-[black]"
+                          initial={{ width: 0 }} // Initial width of the border
+                          variants={{
+                            hovered: { width: "100%" }, // Full width on hover
+                            unhovered: { width: 0 }, // Reset width when not hovered
+                          }}
+                          transition={{ duration: 0.35 }} // Adjust the animation duration
+                        />
+                      </motion.h2>
+
                       <AnimatePresence>
                         <motion.div
                           className="text-left w-[50%] absolute  right-0"
