@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useStore from "./store/menusStore";
 import { AnimatePresence, motion } from "framer-motion";
 import navList from "./assets/nav-takeover-list.json";
@@ -35,6 +35,24 @@ function hasItems(category: Category): category is CategoryWithItems {
 }
 
 export default function TakeoverNav() {
+  const [hoverStates, setHoverStates] = useState<boolean[]>(
+    Array(navList.length).fill(false)
+  );
+
+  const handleMouseEnter = (index: number) => {
+    // Set the hover state for the specific index to true
+    const newHoverStates = [...hoverStates];
+    newHoverStates[index] = true;
+    setHoverStates(newHoverStates);
+  };
+
+  const handleMouseLeave = (index: number) => {
+    // Set the hover state for the specific index to false
+    const newHoverStates = [...hoverStates];
+    newHoverStates[index] = false;
+    setHoverStates(newHoverStates);
+  };
+
   const { showSiteMenu, toggleSiteMenu, navCategory, setNavCategory } =
     useStore();
 
@@ -46,14 +64,8 @@ export default function TakeoverNav() {
             initial="hidden"
             animate={showSiteMenu ? "show" : "hidden"}
             variants={{
-              hidden: {
-                opacity: 0,
-              },
-              show: {
-                opacity: 1,
-                y: 0,
-                // transition: { staggerChildren: 0.0651 },
-              },
+              hidden: { opacity: 0 },
+              show: { opacity: 1, y: 0 },
             }}
             exit={{ opacity: 0 }}
             id="nav-takeover-list"
@@ -65,23 +77,23 @@ export default function TakeoverNav() {
             >
               {navList.map((category, index) => {
                 if (hasItems(category)) {
-                  // Category with items
                   return (
                     <div key={category.name} className="flex flex-row">
                       <motion.h2
-                        className="relative text-left  cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] w-fit"
+                        className="relative text-left cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] w-fit"
                         onClick={() => setNavCategory(index)} // Pass a function reference
                         whileTap={{ scale: 0.98 }}
-                        whileHover="hovered" // Reference to hover animation
                       >
                         {category.name}
-
                         <motion.span
-                          className="absolute bottom-0 left-0 h-[3px] bg-[black]"
-                          initial={{ width: 0 }} // Initial width of the border
+                          className="absolute bottom-[-8px] left-0 h-[3px] bg-black"
+                          initial={{ width: 0 }}
+                          animate={
+                            navCategory === index ? "hovered" : "unhovered"
+                          } // Update based on navCategory
                           variants={{
-                            hovered: { width: "100%" }, // Full width on hover
-                            unhovered: { width: 0 }, // Reset width when not hovered
+                            hovered: { width: "100%" },
+                            unhovered: { width: 0 },
                           }}
                           transition={{ duration: 0.35 }} // Adjust the animation duration
                         />
@@ -89,18 +101,11 @@ export default function TakeoverNav() {
 
                       <AnimatePresence>
                         <motion.div
-                          className="text-left w-[50%] absolute  right-0"
+                          className="text-left w-[50%] absolute right-0"
                           initial="hidden"
                           animate={navCategory === index ? "show" : "hidden"}
                           variants={{
-                            hidden: {
-                              opacity: 0,
-                              zIndex: -1,
-                              // transition: {
-                              //   staggerChildren: 0.0151,
-                              //   staggerDirection: 1,
-                              // },
-                            },
+                            hidden: { opacity: 0, zIndex: -1 },
                             show: {
                               opacity: 1,
                               y: 0,
@@ -110,7 +115,7 @@ export default function TakeoverNav() {
                           }}
                           exit={{ opacity: 0 }}
                         >
-                          {category.items.map((item, index) =>
+                          {category.items.map((item, itemIndex) =>
                             item.header && item.url === null ? (
                               <motion.h3
                                 className="submenu-link text-left block text-[#000000] font-interstate font-[900] text-[23px] leading-[50px] uppercase"
@@ -123,19 +128,9 @@ export default function TakeoverNav() {
                                 {item.title}
                               </motion.h3>
                             ) : item.title === "large-break" ? (
-                              // <motion.p
-                              //   className="large-break-class"
-                              //   key={item.title}
-                              //   variants={{
-                              //     hidden: { opacity: 0, x: -15 },
-                              //     show: { opacity: 1, x: 0 },
-                              //   }}
-                              // >
-                              //   ---
-                              //   </motion.p>
                               <motion.hr
                                 className="w-full border-t-[1px] border-[#CCCCCC] mb-[50px] mt-[40px]"
-                                key={index}
+                                key={item.title}
                                 variants={{
                                   hidden: { opacity: 0, x: -15 },
                                   show: { opacity: 1, x: 0 },
@@ -143,7 +138,7 @@ export default function TakeoverNav() {
                               />
                             ) : (
                               <motion.a
-                                className="submenu-link text-left block font-domine font-[400] text-[#000000] text-[19px] leading-[50px]"
+                                className="relative submenu-link text-left block font-domine font-[400] text-[#000000] text-[19px] leading-[50px] w-fit origin-top-left"
                                 target="_blank"
                                 href={item.url ?? "#"}
                                 key={item.title}
@@ -151,8 +146,28 @@ export default function TakeoverNav() {
                                   hidden: { opacity: 0, x: -15 },
                                   show: { opacity: 1, x: 0 },
                                 }}
+                                initial="hidden"
+                                animate="show"
+                                whileTap={{ scale: 0.98 }}
+                                onMouseEnter={() => handleMouseEnter(itemIndex)} // Set hovered state to true for this index
+                                onMouseLeave={() => handleMouseLeave(itemIndex)} // Set hovered state to false for this index
                               >
                                 {item.title}
+
+                                <motion.span
+                                  className="absolute left-0 h-[1px] bg-[#cccccc] bottom-[10px]"
+                                  initial={{ width: 0 }}
+                                  animate={
+                                    hoverStates[itemIndex]
+                                      ? "hovered"
+                                      : "unhovered"
+                                  } // Animate based on hover state for this index
+                                  variants={{
+                                    hovered: { width: "100%" },
+                                    unhovered: { width: 0 },
+                                  }}
+                                  transition={{ duration: 0.35 }} // Adjust the animation duration
+                                />
                               </motion.a>
                             )
                           )}
@@ -161,7 +176,6 @@ export default function TakeoverNav() {
                     </div>
                   );
                 } else {
-                  // Category without items
                   return (
                     <motion.a
                       className="text-left font-domine font-[400] text-[#000000] text-[20px] leading-[45px] block"
