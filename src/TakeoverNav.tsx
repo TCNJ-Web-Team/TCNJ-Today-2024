@@ -2,7 +2,7 @@ import React from "react";
 import useStore from "./store/menusStore";
 import { AnimatePresence, motion } from "framer-motion";
 import navList from "./assets/nav-takeover-list.json";
-
+import "./styles/submenu-animation.scss";
 // Define the type for individual items
 interface Item {
   title: string;
@@ -77,7 +77,7 @@ export default function TakeoverNav() {
                         {category.name}
 
                         <motion.span
-                          className="absolute bottom-0 left-0 h-[3px] bg-[black]"
+                          className="absolute  bottom-[-9px] left-0 h-[3px] bg-[black]"
                           initial={{ width: 0 }} // Initial width of the border
                           variants={{
                             hovered: { width: "100%" }, // Full width on hover
@@ -143,7 +143,7 @@ export default function TakeoverNav() {
                               />
                             ) : (
                               <motion.a
-                                className="submenu-link text-left block font-domine font-[400] text-[#000000] text-[19px] leading-[50px]"
+                                className="submenu-link-small text-left block font-domine font-[400] text-[#000000] text-[19px] leading-[50px] origin-top-left"
                                 target="_blank"
                                 href={item.url ?? "#"}
                                 key={item.title}
@@ -151,6 +151,7 @@ export default function TakeoverNav() {
                                   hidden: { opacity: 0, x: -15 },
                                   show: { opacity: 1, x: 0 },
                                 }}
+                                whileTap={{ scale: 0.98 }}
                               >
                                 {item.title}
                               </motion.a>
@@ -164,7 +165,7 @@ export default function TakeoverNav() {
                   // Category without items
                   return (
                     <motion.a
-                      className="text-left font-domine font-[400] text-[#000000] text-[20px] leading-[45px] block"
+                      className="submenu-link-small text-left font-domine font-[400] text-[#000000] text-[20px] leading-[45px] block"
                       target="_blank"
                       href={category.link}
                       key={category.name}

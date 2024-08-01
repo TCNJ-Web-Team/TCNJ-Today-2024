@@ -1,0 +1,36 @@
+// Define keyframes for the border animation
+@keyframes borderSlide {
+  0% {
+    border-width: 0;
+    border-color: transparent;
+  }
+  100% {
+    border-width: 2px; // Adjust border thickness as needed
+    border-color: black; // Adjust border color as needed
+  }
+}
+
+// Apply the animation to the submenu-link class
+.submenu-link-small {
+  width: fit-content;
+  position: relative;
+  display: inline-block; // Ensure the element is inline for proper border animation
+  //   padding-bottom: 5px; // Adjust based on your design needs
+
+  // Create a pseudo-element for the border
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    height: 1px; // Border thickness
+    width: 0;
+    background-color: black; // Border color
+    transition: width 0.35s; // Animation duration
+  }
+
+  // Add a hover effect to animate the border
+  &:hover::before {
+    width: 100%;
+  }
+}
