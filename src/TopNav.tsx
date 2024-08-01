@@ -16,8 +16,9 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
 
   const handleSiteMenuClick = () => {
     toggleSiteMenu();
-    setNavCategory(0);
+    setNavCategory("unset");
     closeAppMenu();
+    setNavCategory(0);
   };
   return (
     <div className="flex flex-wrap justify-end gap-[25px] lg:gap-[60px]">

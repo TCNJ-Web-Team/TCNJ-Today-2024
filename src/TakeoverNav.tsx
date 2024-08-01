@@ -75,17 +75,20 @@ export default function TakeoverNav() {
                     sm:h-auto`}
                     >
                       <div
-                        onClick={() => setNavCategory(index)} // Pass a function reference
+                        onClick={() => {
+                          const currentCategory = index; // Replace 'index' with the actual category index
+                          setNavCategory(currentCategory);
+                        }}
                       >
                         <motion.h2
-                          className="relative text-left  cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] w-fit"
+                          className="relative text-left cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] w-fit"
                           whileTap={{ scale: 0.98 }}
                           whileHover="hovered" // Reference to hover animation
                         >
                           {category.name}
 
                           <motion.span
-                            className="absolute  bottom-[-9px] left-0 h-[3px] bg-[black]"
+                            className="absolute bottom-[-9px] left-0 h-[3px] bg-[black]"
                             initial={{ width: 0 }} // Initial width of the border
                             variants={{
                               hovered: { width: "100%" }, // Full width on hover
@@ -95,6 +98,7 @@ export default function TakeoverNav() {
                           />
                         </motion.h2>
                       </div>
+
                       <AnimatePresence>
                         <motion.div
                           className={`text-left sm:w-[50%] sm:absolute  right-0
@@ -106,6 +110,7 @@ export default function TakeoverNav() {
                             hidden: {
                               opacity: 0,
                               zIndex: -1,
+                              height: 0,
                               // transition: {
                               //   staggerChildren: 0.0151,
                               //   staggerDirection: 1,
@@ -116,6 +121,7 @@ export default function TakeoverNav() {
                               y: 0,
                               transition: { staggerChildren: 0.0651 },
                               zIndex: 1,
+                              height: "auto",
                             },
                           }}
                           exit={{ opacity: 0 }}
