@@ -69,7 +69,7 @@ export default function TakeoverNav() {
                   return (
                     <div key={category.name} className="flex flex-row">
                       <motion.h2
-                        className="relative text-left w-fit cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] text-shadow-white"
+                        className="relative text-left w-fit cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] text-shadow-white z-10"
                         onClick={() => setNavCategory(index)} // Pass a function reference
                         whileTap={{ scale: 0.98 }}
                         whileHover="hovered" // Reference to hover animation
@@ -77,7 +77,7 @@ export default function TakeoverNav() {
                         {category.name}
 
                         <motion.span
-                          className="absolute bottom-0 left-0 h-[3px] bg-[black]"
+                          className="absolute bottom-0 left-0 h-[3px] bg-[black]  z-9"
                           initial={{ width: 0 }} // Initial width of the border
                           variants={{
                             hovered: { width: "100%" }, // Full width on hover
