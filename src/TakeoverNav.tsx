@@ -35,8 +35,13 @@ function hasItems(category: Category): category is CategoryWithItems {
 }
 
 export default function TakeoverNav() {
-  const { showSiteMenu, toggleSiteMenu, navCategory, setNavCategory } =
-    useStore();
+  const {
+    showSiteMenu,
+    toggleSiteMenu,
+    navCategory,
+    setNavCategory,
+    setNavCategoryDesktop,
+  } = useStore();
 
   return (
     <>
@@ -76,8 +81,13 @@ export default function TakeoverNav() {
                     >
                       <div
                         onClick={() => {
-                          const currentCategory = index; // Replace 'index' with the actual category index
-                          setNavCategory(currentCategory);
+                          const screenWidth = window.innerWidth;
+                          if (screenWidth <= 550) {
+                            const currentCategory = index; // Replace 'index' with the actual category index
+                            setNavCategory(currentCategory);
+                          } else {
+                            setNavCategoryDesktop(index);
+                          }
                         }}
                       >
                         <motion.h2

@@ -9,6 +9,7 @@ interface StoreState {
   closeAppMenu: () => void;
   navCategory: number | string;
   setNavCategory: (category: number | string) => void; // Updated type to accept a number
+  setNavCategoryDesktop: (category: number | string) => void; // Updated type to accept a number
 }
 
 const useStore = create<StoreState>((set, get) => ({
@@ -22,6 +23,11 @@ const useStore = create<StoreState>((set, get) => ({
   setNavCategory: (category: number | string) => {
     set((state) => ({
       navCategory: state.navCategory === category ? "unset" : category,
+    }));
+  },
+  setNavCategoryDesktop: (category: number | string) => {
+    set((state) => ({
+      navCategory: category,
     }));
   },
 }));
