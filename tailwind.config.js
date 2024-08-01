@@ -43,7 +43,11 @@ export default {
         darklinkblue: "#2B6388",
         lightlinkblue: "#9BD0F3",
       },
+      textShadow: {
+        white: "2px 2px 4px rgba(255, 255, 255, 0.75)", // Example white text shadow
+      },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line no-undef
+  plugins: [require("tailwindcss-textshadow")],
 };
