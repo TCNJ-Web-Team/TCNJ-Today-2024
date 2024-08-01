@@ -37,3 +37,30 @@
 .top-open {
   margin-top: -20px;
 }
+@media screen and (max-width: 550px) {
+  .dropdown-container {
+    position: relative;
+    cursor: pointer;
+    &:before {
+      position: absolute;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      content: "";
+      background-image: url("/arrow.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: 50%; // Default top for all instances
+      transform: translateY(-50%); // Vertically center the image
+      transition: all 0.25s ease-in-out;
+    }
+
+    &.first-one:before {
+      top: 20px; // Specific top for the first instance
+    }
+    &.active-arrow:before {
+      transform: translateY(-50%) rotate(180deg); // Rotate 180 degrees when active
+    }
+  }
+}

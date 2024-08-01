@@ -93,7 +93,8 @@ export default function TakeoverNav() {
                       <div
                         className={`dropdown-container
                            pt-[25px] pb-[25px]
-                    ${index === 0 ? "!pt-0" : ""}
+                    ${index === 0 ? "!pt-0 first-one" : ""}
+                    ${navCategory === index ? "active-arrow" : ""}
                     mb-[-20px] sm:mb-0
                                            
 
@@ -110,7 +111,7 @@ export default function TakeoverNav() {
                         }}
                       >
                         <motion.h2
-                          className={`*:relative text-left cursor-pointer block font-alfaslab font-normal 
+                          className={`relative text-left cursor-pointer block font-alfaslab font-normal 
                           
                           text-[30px]
                           leading-[40px]
@@ -124,7 +125,7 @@ export default function TakeoverNav() {
                           {category.name}
 
                           <motion.span
-                            className="absolute bottom-[-9px] left-0 h-[3px] bg-[black]"
+                            className="absolute bottom-[-2px] sm:bottom-[-9px] left-0 h-[0px] sm:h-[3px] bg-[black]"
                             initial={{ width: 0 }} // Initial width of the border
                             variants={{
                               hovered: { width: "100%" }, // Full width on hover

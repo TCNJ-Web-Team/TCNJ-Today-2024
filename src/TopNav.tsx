@@ -29,12 +29,14 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
     }
   };
   return (
-    <div className="flex flex-wrap justify-end gap-[25px] lg:gap-[60px]">
+    <div className="flex justify-end gap-[25px] lg:gap-[60px]">
       {/* {showSiteMenu && <p>Site Menu</p>}
       {showAppMenu && <p>Site App Menu</p>} */}
       {topNavItems.map((item, index) => (
         <a
-          className="text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
+          className="
+          sm:block hidden cursor-pointer
+          text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
           target="_blank"
           href={item.url}
           key={item.id}
@@ -62,7 +64,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
           className="h-[25px] mx-auto"
           alt="All Apps"
         />
-        All Apps
+        <span className="hidden sm:block">All Apps</span>
       </a>
       <a
         className="
@@ -76,7 +78,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
           className="h-[25px]  w-[25px] mx-auto"
           alt="Menu"
         />
-        Menu
+        <span className="hidden sm:block">Menu</span>
       </a>
     </div>
   );
