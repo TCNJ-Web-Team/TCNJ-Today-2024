@@ -105,11 +105,7 @@ export default function TakeoverNav() {
                           text-[30px]
                           leading-[40px]
                           md:text-[50px] md:leading-[50px] md:mb-[50px] w-fit
-                          ${
-                            navCategory === index
-                              ? "mb-[-20px] transition-all"
-                              : "sm:mb-[0]"
-                          }
+                      
 
                           `}
                           whileTap={{ scale: 0.98 }}
@@ -133,7 +129,7 @@ export default function TakeoverNav() {
                         <motion.div
                           className={`
                             submenu-container
-                            text-left sm:w-[50%] sm:absolute  right-0 
+                            text-left sm:w-[50%] sm:absolute  right-0 relative
                             ${navCategory === index ? "h-auto " : "h-[0]"}
                             `}
                           initial="hidden"
@@ -164,7 +160,9 @@ export default function TakeoverNav() {
                           {category.items.map((item, index) =>
                             item.header && item.url === null ? (
                               <motion.h3
-                                className="submenu-link text-left block text-[#000000] font-interstate font-[900] text-[20px] sm:text-[23px] leading-[50px] uppercase"
+                                className={`submenu-link text-left block text-[#000000] font-interstate font-[900] text-[20px] sm:text-[23px] leading-[50px] uppercase
+                                  
+                                  `}
                                 key={item.title}
                                 variants={{
                                   hidden: { opacity: 0, x: -15 },
