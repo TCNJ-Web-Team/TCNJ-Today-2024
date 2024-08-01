@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useStore from "./store/menusStore";
 import { AnimatePresence, motion } from "framer-motion";
 import navList from "./assets/nav-takeover-list.json";
@@ -42,7 +42,6 @@ export default function TakeoverNav() {
     setNavCategory,
     setNavCategoryDesktop,
   } = useStore();
-
   return (
     <>
       <AnimatePresence initial={false}>
@@ -80,6 +79,7 @@ export default function TakeoverNav() {
                     sm:h-auto`}
                     >
                       <div
+                        className="dropdown-container"
                         onClick={() => {
                           const screenWidth = window.innerWidth;
                           if (screenWidth <= 550) {
