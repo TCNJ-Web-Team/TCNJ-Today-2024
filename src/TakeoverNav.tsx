@@ -68,6 +68,9 @@ export default function TakeoverNav() {
               className="mx-[35px] sm:mx-auto py-[50px] md:py-[175px] md:max-w-[1130px] mdLgPadding relative"
             >
               {navList.map((category, index) => {
+                const isFirst = index === 0;
+                const isLast = 4;
+                console.log(isLast);
                 if (hasItems(category)) {
                   // Category with items
                   return (
@@ -75,16 +78,23 @@ export default function TakeoverNav() {
                       key={category.name}
                       className={`sm:flex flex-row  
                         
-                     w-full border-b-[1px] border-[#CCCCCC] 
-                        sm:border-b-0
+                     w-full border-t-[1px] border-[#CCCCCC] 
+                        sm:border-t-0
                     sm:h-auto
-                
+                pb-[20px] sm:pb-0
+                    ${isFirst ? "border-t-0" : ""}
+                    ${
+                      index === isLast
+                        ? "border-b-[1px] border-[#CCCCCC]  sm:border-b-0 mb-[35px] sm-mb-0"
+                        : ""
+                    }
                     `}
                     >
                       <div
                         className={`dropdown-container
-                           pt-[35px] pb-[25px]
-                    ${index === 0 ? "pt-0" : ""}
+                           pt-[25px] pb-[25px]
+                    ${index === 0 ? "!pt-0" : ""}
+                    mb-[-20px] sm:mb-0
                                            
 
                     sm:py-0
