@@ -70,7 +70,7 @@ export default function TakeoverNav() {
               {navList.map((category, index) => {
                 const isFirst = index === 0;
                 const isLast = 4;
-                console.log(isLast);
+                // console.log(isLast);
                 if (hasItems(category)) {
                   // Category with items
                   return (
@@ -85,7 +85,7 @@ export default function TakeoverNav() {
                     ${isFirst ? "border-t-0" : ""}
                     ${
                       index === isLast
-                        ? "border-b-[1px] border-[#CCCCCC]  sm:border-b-0 mb-[35px] sm-mb-0"
+                        ? "border-b-[1px] border-[#CCCCCC]  sm:border-b-0 mb-[35px] sm:mb-0"
                         : ""
                     }
                     `}
