@@ -67,29 +67,39 @@ export default function TakeoverNav() {
                 if (hasItems(category)) {
                   // Category with items
                   return (
-                    <div key={category.name} className="flex flex-row">
-                      <motion.h2
-                        className="relative text-left  cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] w-fit"
+                    <div
+                      key={category.name}
+                      className={`sm:flex flex-row  
+                        
+                    
+                    sm:h-auto`}
+                    >
+                      <div
                         onClick={() => setNavCategory(index)} // Pass a function reference
-                        whileTap={{ scale: 0.98 }}
-                        whileHover="hovered" // Reference to hover animation
                       >
-                        {category.name}
+                        <motion.h2
+                          className="relative text-left  cursor-pointer block font-alfaslab font-normal text-[50px] leading-[50px] mb-[50px] w-fit"
+                          whileTap={{ scale: 0.98 }}
+                          whileHover="hovered" // Reference to hover animation
+                        >
+                          {category.name}
 
-                        <motion.span
-                          className="absolute  bottom-[-9px] left-0 h-[3px] bg-[black]"
-                          initial={{ width: 0 }} // Initial width of the border
-                          variants={{
-                            hovered: { width: "100%" }, // Full width on hover
-                            unhovered: { width: 0 }, // Reset width when not hovered
-                          }}
-                          transition={{ duration: 0.35 }} // Adjust the animation duration
-                        />
-                      </motion.h2>
-
+                          <motion.span
+                            className="absolute  bottom-[-9px] left-0 h-[3px] bg-[black]"
+                            initial={{ width: 0 }} // Initial width of the border
+                            variants={{
+                              hovered: { width: "100%" }, // Full width on hover
+                              unhovered: { width: 0 }, // Reset width when not hovered
+                            }}
+                            transition={{ duration: 0.35 }} // Adjust the animation duration
+                          />
+                        </motion.h2>
+                      </div>
                       <AnimatePresence>
                         <motion.div
-                          className="text-left w-[50%] absolute  right-0"
+                          className={`text-left sm:w-[50%] sm:absolute  right-0
+                            ${navCategory === index ? "h-auto" : "h-[0]"}
+                            `}
                           initial="hidden"
                           animate={navCategory === index ? "show" : "hidden"}
                           variants={{
