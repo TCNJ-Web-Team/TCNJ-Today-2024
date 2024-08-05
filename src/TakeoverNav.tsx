@@ -212,7 +212,9 @@ export default function TakeoverNav() {
                             ) : (
                               <motion.a
                                 className="submenu-link-small text-left block font-domine 
-                              font-[18px] leading-[40px]
+                              font-[18px] leading-[25px]
+                              mb-[15px]
+                              sm:mb-[0px]
                                sm:leading-[45px]
                                 md:font-[400] text-[#000000] md:text-[19px] md:leading-[50px] origin-top-left"
                                 target="_blank"

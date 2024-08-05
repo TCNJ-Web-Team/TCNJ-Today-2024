@@ -27,6 +27,9 @@
     width: 0;
     background-color: black; // Border color
     transition: width 0.35s; // Animation duration
+    @media screen and (max-width: 550px) {
+      bottom: 0px;
+    }
   }
 
   // Add a hover effect to animate the border
