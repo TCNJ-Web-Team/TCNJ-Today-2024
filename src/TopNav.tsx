@@ -1,4 +1,5 @@
 import React from "react";
+import { TCNJ_URL } from "../global";
 
 interface TopNavProps {
   topNavItems: { id: number; name: string; url: string; topNav: boolean }[];
@@ -42,7 +43,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
           key={item.id}
         >
           <img
-            src={`/icons/${item.name
+            src={`${TCNJ_URL}/icons/${item.name
               .toLowerCase()
               .replace(/\s+/g, "-")}-micro.svg`}
             alt={item.name}

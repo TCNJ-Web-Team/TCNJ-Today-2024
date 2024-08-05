@@ -12,7 +12,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
   const { showAppMenu, toggleAppMenu } = useStore();
 
   // console.log(MY_GLOBAL); // 'my-global-value'
-  console.log(TCNJ_URL); // 'https://api.example.com'
+  // console.log(TCNJ_URL); // 'https://api.example.com'
   return (
     <>
       <AnimatePresence initial={false}>
@@ -62,14 +62,14 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                 }}
               >
                 <img
-                  src={`/final-icons/outline/${item.name
+                  src={`${TCNJ_URL}/final-icons/outline/${item.name
                     .toLowerCase()
                     .replace(/\s+/g, "-")}.svg`}
                   alt={item.name}
                   className="h-[55px] mx-auto mb-[15px] outline-icon"
                 />
                 <img
-                  src={`/final-icons/color/${item.name
+                  src={`${TCNJ_URL}/final-icons/color/${item.name
                     .toLowerCase()
                     .replace(/\s+/g, "-")}.svg`}
                   alt={item.name}
