@@ -35,7 +35,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       {topNavItems.map((item, index) => (
         <a
           className="
-          sm:block hidden cursor-pointer
+          md:block hidden cursor-pointer
           text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
           target="_blank"
           href={item.url}
