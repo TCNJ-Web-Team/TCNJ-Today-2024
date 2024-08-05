@@ -36,8 +36,12 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       sm:border-[1px] sm:border-[#e0e0e0]
       pt-[47px] pb-[200px]
       gap-y-[60px]  
-      sm:top-[10px] sm:grid-cols-3  sm:w-[655px] sm:h-[708px]
-      md:w-[630px] md:max-h-[708px]  md:left-auto md:right-0
+      sm:top-[10px] sm:grid-cols-3  
+      sm:w-[calc(100%-100px)]
+      sm:mx-[50px]
+      md:mx-[0px]
+      md:w-[655px] sm:h-[708px]
+      lg:w-[630px] md:max-h-[708px]  md:left-auto md:right-0
       sm:overflow-auto"
           >
             {appList.map((item) => (
