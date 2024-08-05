@@ -65,7 +65,7 @@ export default function TakeoverNav() {
           >
             <div
               id="inner-takeover-nav"
-              className="mx-[35px] sm:mx-auto py-[50px] md:py-[175px] md:max-w-[1130px] betweenLgMd:mx-[35px] mdLgPadding relative"
+              className="mx-[35px] sx:ms-mx-[48px] md:mx-auto py-[50px] sm:py-[75px] md:py-[175px] md:max-w-[1130px] betweenLgMd:mx-[35px] mdLgPadding relative"
             >
               {navList.map((category, index) => {
                 const isFirst = index === 0;
@@ -115,6 +115,8 @@ export default function TakeoverNav() {
                           
                           text-[30px]
                           leading-[40px]
+
+                          sm:text-[40px] sm:leading-[54px] sm:mb-[25px] 
                           md:text-[50px] md:leading-[50px] md:mb-[50px] w-fit
                       
 
