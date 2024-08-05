@@ -2,6 +2,8 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useStore from "./store/menusStore";
 import "./styles/app-list.scss";
+import { TCNJ_URL } from "../global";
+
 interface AppListingProps {
   appList: { id: number; name: string; url: string; topNav: boolean }[];
 }
@@ -9,6 +11,8 @@ interface AppListingProps {
 const AppListing: React.FC<AppListingProps> = ({ appList }) => {
   const { showAppMenu, toggleAppMenu } = useStore();
 
+  // console.log(MY_GLOBAL); // 'my-global-value'
+  console.log(TCNJ_URL); // 'https://api.example.com'
   return (
     <>
       <AnimatePresence initial={false}>
