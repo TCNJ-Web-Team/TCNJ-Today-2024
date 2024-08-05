@@ -55,7 +55,9 @@
       transform: translateY(-50%); // Vertically center the image
       transition: all 0.25s ease-in-out;
     }
-
+    &.first-one {
+      margin-top: 25px;
+    }
     &.first-one:before {
       top: 20px; // Specific top for the first instance
     }

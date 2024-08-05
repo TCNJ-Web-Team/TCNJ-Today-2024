@@ -230,7 +230,7 @@ export default function TakeoverNav() {
                   // Category without items
                   return (
                     <motion.a
-                      className="submenu-link-small text-left font-domine font-[400] text-[#000000] text-[20px] leading-[45px] block"
+                      className="submenu-link-small text-left font-domine font-[400] text-[#000000] text-[18px] sm:text-[20px] leading-[45px] block"
                       target="_blank"
                       href={category.link}
                       key={category.name}
