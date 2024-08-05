@@ -65,7 +65,7 @@ export default function TakeoverNav() {
           >
             <div
               id="inner-takeover-nav"
-              className="mx-[35px] sm:mx-auto py-[50px] md:py-[175px] md:max-w-[1130px] mdLgPadding relative"
+              className="mx-[35px] sm:mx-auto py-[50px] md:py-[175px] md:max-w-[1130px] betweenLgMd:mx-[35px] mdLgPadding relative"
             >
               {navList.map((category, index) => {
                 const isFirst = index === 0;
