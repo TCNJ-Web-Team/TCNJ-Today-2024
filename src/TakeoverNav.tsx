@@ -65,7 +65,7 @@ export default function TakeoverNav() {
           >
             <div
               id="inner-takeover-nav"
-              className="mx-[35px] sm:mx-auto py-[50px] md:py-[175px] md:max-w-[1130px] mdLgPadding relative"
+              className="mx-[35px] sx:ms-mx-[48px] md:mx-auto py-[50px] sm:py-[75px] md:py-[175px] md:max-w-[1130px] betweenLgMd:mx-[35px] mdLgPadding relative"
             >
               {navList.map((category, index) => {
                 const isFirst = index === 0;
@@ -115,6 +115,9 @@ export default function TakeoverNav() {
                           
                           text-[30px]
                           leading-[40px]
+
+                          sm:text-[40px] sm:leading-[54px] sm:mb-[25px] 
+                          betweenSmMd:text-[30px] betweenSmMd:leading-[40px] betweenSmMd:mb-[25px] 
                           md:text-[50px] md:leading-[50px] md:mb-[50px] w-fit
                       
 
@@ -140,7 +143,10 @@ export default function TakeoverNav() {
                         <motion.div
                           className={`
                             submenu-container
-                            text-left sm:w-[50%] sm:absolute  right-0 relative
+                            text-left 
+                            betweenSmMd:w-[45%] 
+                            sm:w-[50%] 
+                            sm:absolute  right-0 relative
                             ${navCategory === index ? "h-auto " : "h-[0]"}
                             `}
                           initial="hidden"
@@ -207,7 +213,7 @@ export default function TakeoverNav() {
                               <motion.a
                                 className="submenu-link-small text-left block font-domine 
                               font-[18px] leading-[40px]
-
+                               sm:leading-[45px]
                                 md:font-[400] text-[#000000] md:text-[19px] md:leading-[50px] origin-top-left"
                                 target="_blank"
                                 href={item.url ?? "#"}
@@ -230,7 +236,7 @@ export default function TakeoverNav() {
                   // Category without items
                   return (
                     <motion.a
-                      className="submenu-link-small text-left font-domine font-[400] text-[#000000] text-[20px] leading-[45px] block"
+                      className="submenu-link-small text-left font-domine font-[400] text-[#000000] text-[18px] sm:text-[20px] leading-[45px] block"
                       target="_blank"
                       href={category.link}
                       key={category.name}
