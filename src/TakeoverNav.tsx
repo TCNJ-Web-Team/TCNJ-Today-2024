@@ -119,7 +119,7 @@ export default function TakeoverNav() {
                           sm:text-[40px] sm:leading-[54px] sm:mb-[25px] 
                           betweenSmMd:text-[30px] betweenSmMd:leading-[40px] betweenSmMd:mb-[25px] 
                           md:text-[50px] md:leading-[50px] md:mb-[50px] w-fit
-                          ${navCategory === index ? "text-tcnjblue" : ""}
+                          ${navCategory === index ? "sm:text-tcnjblue" : ""}
 
                           `}
                           whileTap={{ scale: 0.98 }}
@@ -128,7 +128,11 @@ export default function TakeoverNav() {
                           {category.name}
 
                           <motion.span
-                            className="absolute bottom-[-2px] md:bottom-[-9px] left-0 h-[0px] sm:h-[3px] bg-[black]"
+                            className={`absolute bottom-[-2px] md:bottom-[-9px] left-0 h-[0px] sm:h-[3px] bg-[black] ${
+                              navCategory === index
+                                ? "sm:bg-tcnjblue sm:!w-[100%]"
+                                : ""
+                            }`}
                             initial={{ width: 0 }} // Initial width of the border
                             variants={{
                               hovered: { width: "100%" }, // Full width on hover
@@ -147,6 +151,7 @@ export default function TakeoverNav() {
                             betweenSmMd:w-[45%] 
                             sm:w-[50%] 
                             sm:absolute  right-0 relative
+                            sm:top-[75px] md:top-[175px]
                             ${navCategory === index ? "h-auto " : "h-[0]"}
                             `}
                           initial="hidden"
