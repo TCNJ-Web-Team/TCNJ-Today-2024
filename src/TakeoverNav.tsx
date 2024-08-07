@@ -119,7 +119,7 @@ export default function TakeoverNav() {
                           sm:text-[40px] sm:leading-[54px] sm:mb-[25px] 
                           betweenSmMd:text-[30px] betweenSmMd:leading-[40px] betweenSmMd:mb-[25px] 
                           md:text-[50px] md:leading-[50px] md:mb-[50px] w-fit
-                      
+                          ${navCategory === index ? "text-tcnjblue" : ""}
 
                           `}
                           whileTap={{ scale: 0.98 }}
