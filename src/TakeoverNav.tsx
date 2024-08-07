@@ -128,11 +128,8 @@ export default function TakeoverNav() {
                           {category.name}
 
                           <motion.span
-                            className={`absolute bottom-[-2px] md:bottom-[-9px] left-0 h-[0px] sm:h-[3px] bg-[black] ${
-                              navCategory === index
-                                ? "sm:bg-tcnjblue sm:!w-[100%]"
-                                : ""
-                            }`}
+                            className={`absolute bottom-[-2px] md:bottom-[-9px] left-0 h-[0px] sm:h-[3px] bg-[black] 
+                              ${navCategory === index ? "sm:hidden" : ""}`}
                             initial={{ width: 0 }} // Initial width of the border
                             variants={{
                               hovered: { width: "100%" }, // Full width on hover
