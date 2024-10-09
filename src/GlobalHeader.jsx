@@ -170,12 +170,7 @@ export default function GlobalHeader() {
             >
               Offices
             </a>
-            <a
-              className="desktop-global-nav-item"
-              href="https://today.tcnj.edu/"
-            >
-              TCNJ Today
-            </a>
+
             <img
               id="open-sidebar-button"
               src="https://brand.tcnj.edu/wp-content/uploads/sites/11/2023/07/menu-icon.svg"
@@ -186,14 +181,14 @@ export default function GlobalHeader() {
         </div>
       </div>
 
-      <div id="site-header">
+      {/* <div id="site-header">
         <div id="site-title" className="inner">
           <a id="parent-site"></a>
         </div>
         <div id="site-nav">
           <div className="inner"></div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

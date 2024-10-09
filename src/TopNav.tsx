@@ -30,15 +30,15 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
     }
   };
   return (
-    <div className="flex justify-end gap-[25px] lg:gap-[60px]">
+    <div className="flex justify-end gap-[5px] lg:gap-[26px] items-center">
       {/* {showSiteMenu && <p>Site Menu</p>}
       {showAppMenu && <p>Site App Menu</p>} */}
       {topNavItems.map((item, index) => (
         <a
           className="
           md:block hidden cursor-pointer
-          text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] "
-          target="_blank"
+          text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[2.5px]
+           hover:bg-white transition-all duration-500"
           href={item.url}
           key={item.id}
         >
@@ -55,13 +55,13 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       ))}
       <a
         className="
-          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000]"
-        target="_blank"
+          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[10px] sm:pb-[2.5px]
+          hover:bg-white transition-all duration-500"
         onClick={handleAppMenuClick}
         id="all-apps"
       >
         <img
-          src="/icons/all-apps.svg"
+          src={`${TCNJ_URL}/icons/all-apps.svg`}
           className="h-[25px] mx-auto"
           alt="All Apps"
         />
@@ -69,13 +69,13 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       </a>
       <a
         className="
-          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000]"
-        target="_blank"
+          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[10px] sm:pb-[2.5px]
+          hover:bg-white transition-all duration-500"
         onClick={handleSiteMenuClick}
         id="menu-button"
       >
         <img
-          src="/icons/menu-lines.svg"
+          src={`${TCNJ_URL}/icons/menu-lines.svg`}
           className="h-[25px]  w-[25px] mx-auto"
           alt="Menu"
         />
