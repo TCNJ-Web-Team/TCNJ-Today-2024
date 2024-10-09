@@ -39,3 +39,7 @@
     // }
   }
 }
+.wp-block-post-content a:where(:not(.wp-element-button)) {
+  color: inherit;
+  text-decoration: none;
+}

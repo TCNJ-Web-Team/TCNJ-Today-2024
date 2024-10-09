@@ -55,7 +55,6 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                 className="icon-link text-center leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] 
           h-[93px]
           block"
-                target="_blank"
                 href={item.url}
                 key={item.id}
                 variants={{
