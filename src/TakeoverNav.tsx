@@ -132,10 +132,14 @@ export default function TakeoverNav() {
                               ${navCategory === index ? "bg-tcnjblue" : ""}`}
                             // className={`absolute bottom-[-2px] md:bottom-[-9px] left-0 h-[0px] sm:h-[3px] bg-[black]
                             //   ${navCategory === index ? "sm:hidden" : ""}`}
-                            initial={{ width: 0 }} // Initial width of the border
+                            initial={{
+                              width: navCategory === index ? "100%" : 0,
+                            }} // Initial width of the border
                             variants={{
                               hovered: { width: "100%" }, // Full width on hover
-                              unhovered: { width: 0 }, // Reset width when not hovered
+                              unhovered: {
+                                width: 0,
+                              }, // Reset width when not hovered
                             }}
                             transition={{ duration: 0.35 }} // Adjust the animation duration
                           />
