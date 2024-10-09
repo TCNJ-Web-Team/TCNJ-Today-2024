@@ -181,14 +181,14 @@ export default function GlobalHeader() {
         </div>
       </div>
 
-      <div id="site-header">
+      {/* <div id="site-header">
         <div id="site-title" className="inner">
           <a id="parent-site"></a>
         </div>
         <div id="site-nav">
           <div className="inner"></div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

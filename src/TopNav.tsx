@@ -61,7 +61,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
         id="all-apps"
       >
         <img
-          src="/icons/all-apps.svg"
+          src={`${TCNJ_URL}/icons/all-apps.svg`}
           className="h-[25px] mx-auto"
           alt="All Apps"
         />
@@ -75,7 +75,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
         id="menu-button"
       >
         <img
-          src="/icons/menu-lines.svg"
+          src={`${TCNJ_URL}/icons/menu-lines.svg`}
           className="h-[25px]  w-[25px] mx-auto"
           alt="Menu"
         />

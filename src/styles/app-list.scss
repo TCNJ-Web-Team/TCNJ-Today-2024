@@ -26,20 +26,31 @@
     transform: translateX(-50%);
     width: 100%;
   }
-  &:hover {
-    .outline-icon {
-      opacity: 0;
-    }
+  @media (min-width: 550px) {
+    &:hover {
+      .outline-icon {
+        opacity: 0;
+      }
 
-    .color-icon {
-      opacity: 1;
+      .color-icon {
+        opacity: 1;
+      }
+      // p {
+      //   text-decoration: underline;
+      // }
     }
-    // p {
-    //   text-decoration: underline;
-    // }
   }
 }
 .wp-block-post-content a:where(:not(.wp-element-button)) {
   color: inherit;
   text-decoration: none;
+}
+:root :where(.is-layout-flow) > * {
+  margin-block-start: 0;
+}
+:where(body .is-layout-constrained) > :last-child:last-child {
+  margin-block-end: 0;
+}
+.global-footer-2022 a {
+  color: #fff !important;
 }

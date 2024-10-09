@@ -10,7 +10,9 @@ interface AppListingProps {
 
 const AppListing: React.FC<AppListingProps> = ({ appList }) => {
   const { showAppMenu, toggleAppMenu } = useStore();
-
+  const handleLinkClick = (url: string) => {
+    window.location.href = url;
+  };
   // console.log(MY_GLOBAL); // 'my-global-value'
   // console.log(TCNJ_URL); // 'https://api.example.com'
   return (
@@ -55,6 +57,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                 className="icon-link text-center leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] 
           h-[93px]
           block"
+                // onClick={() => handleLinkClick(item.url)}
                 href={item.url}
                 key={item.id}
                 variants={{
