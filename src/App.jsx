@@ -18,11 +18,11 @@ function App() {
       <div id="today-container" className="bg-tcnjyellow">
         <div
           id="top"
-          className="flex justify-between items-center bg-tcnjyellow py-[20px] px-[36px]  lg:px-0 mx-auto md:max-w-[1130px] mdLgPadding"
+          className="flex justify-between items-center bg-tcnjyellow px-[36px]  lg:px-0 mx-auto md:max-w-[1130px] mdLgPadding"
         >
           <h1
             className="font-chunkfive text-[30px] leading-[54px] text-left text-tcnjblue
-        sm:text-[45px] sm:leading-[54px]
+        sm:text-[45px] sm:leading-[54px] py-[20px] sm:py-[30px] 
         "
           >
             TCNJ Today

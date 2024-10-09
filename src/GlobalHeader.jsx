@@ -170,12 +170,7 @@ export default function GlobalHeader() {
             >
               Offices
             </a>
-            <a
-              className="desktop-global-nav-item"
-              href="https://today.tcnj.edu/"
-            >
-              TCNJ Today
-            </a>
+
             <img
               id="open-sidebar-button"
               src="https://brand.tcnj.edu/wp-content/uploads/sites/11/2023/07/menu-icon.svg"
