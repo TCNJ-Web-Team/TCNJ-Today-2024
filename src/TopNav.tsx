@@ -38,7 +38,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
           className="
           md:block hidden cursor-pointer
           text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[2.5px]
-          rounded-[7px] hover:bg-white transition-all duration-500"
+           hover:bg-white transition-all duration-500"
           target="_blank"
           href={item.url}
           key={item.id}
@@ -57,7 +57,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       <a
         className="
           cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[10px] sm:pb-[2.5px]
-          rounded-[10px] hover:bg-white transition-all duration-500"
+          hover:bg-white transition-all duration-500"
         target="_blank"
         onClick={handleAppMenuClick}
         id="all-apps"
@@ -72,7 +72,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       <a
         className="
           cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[10px] sm:pb-[2.5px]
-          rounded-[10px] hover:bg-white transition-all duration-500"
+          hover:bg-white transition-all duration-500"
         target="_blank"
         onClick={handleSiteMenuClick}
         id="menu-button"
