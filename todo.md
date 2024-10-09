@@ -1,3 +1,6 @@
+pawprint logo, site active? student experience
+top menu bar animation
+
 change underline to tcnjblue for desktop
 x - remove hover for active link on tablet & mobile
 
