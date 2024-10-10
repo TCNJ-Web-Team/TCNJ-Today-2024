@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import useStore from "./store/menusStore";
 import "./styles/app-list.scss";
 import { TCNJ_URL } from "../global";
+import MenuCloseButton from "./MenuCloseButton";
 
 interface AppListingProps {
   appList: { id: number; name: string; url: string; topNav: boolean }[];
@@ -52,6 +53,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       lg:w-[630px] md:max-h-[650px]  md:left-auto md:right-0
       sm:overflow-auto"
           >
+            <MenuCloseButton />
             {appList.map((item) => (
               <motion.a
                 className="icon-link text-center leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] 
