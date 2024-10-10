@@ -1,32 +1,37 @@
-import React from "react";
-import { TCNJ_URL } from "../global";
+import React, { useEffect } from "react";
 
-interface TagBoardProps {
-  //   topNavItems: { id: number; name: string; url: string; topNav: boolean }[];
+// Extend the Window interface to include tagboardDomain
+declare global {
+  interface Window {
+    tagboardDomain: string;
+  }
 }
 
-const TagBoardContent: React.FC<TagBoardProps> = () => {
+const TagBoardContent: React.FC = () => {
+  useEffect(() => {
+    // Set the tagboard domain
+    window.tagboardDomain = "https://embed.tagboard.com";
+
+    // Create the script element for the tagboard embed
+    const script = document.createElement("script");
+    script.src = "https://static.tagboard.com/embed/assets/js/embed.js";
+    script.async = true;
+
+    // Append the script to the document body
+    document.body.appendChild(script);
+
+    // Cleanup the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div id="tagboard-content">
-      <picture>
-        {/* For screens larger than 1249px */}
-        <source
-          media="(min-width: 1250px)"
-          srcSet={TCNJ_URL + `/tag-desktop.jpg`}
-        />
-        {/* For screens between 1200px and 1249px */}
-        <source
-          media="(min-width: 550px)"
-          srcSet={TCNJ_URL + `/tag-tablet.jpg`}
-        />
-        {/* Default source for smaller screens */}
-        <img
-          className="mx-auto"
-          src={TCNJ_URL + `/tag-mobile.jpg`}
-          alt="Tag Image"
-        />
-      </picture>
+      {/* Inject the tagboard embed */}
+      <div className="tagboard-embed" tgb-embed-id="3673" />
     </div>
   );
 };
+
 export default TagBoardContent;

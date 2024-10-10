@@ -37,7 +37,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
         <a
           className="
           md:block hidden cursor-pointer
-          text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[2.5px]
+          text-center leading-[35px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[2.5px]
            hover:bg-white transition-all duration-500"
           href={item.url}
           key={item.id}
@@ -55,7 +55,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       ))}
       <a
         className="
-          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[10px] sm:pb-[2.5px]
+          cursor-pointer text-center leading-[35px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[10px] sm:pb-[2.5px]
           hover:bg-white transition-all duration-500"
         onClick={handleAppMenuClick}
         id="all-apps"
@@ -69,7 +69,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       </a>
       <a
         className="
-          cursor-pointer text-center leading-[30px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[10px] sm:pb-[2.5px]
+          cursor-pointer text-center leading-[35px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[10px] sm:pb-[2.5px]
           hover:bg-white transition-all duration-500"
         onClick={handleSiteMenuClick}
         id="menu-button"
