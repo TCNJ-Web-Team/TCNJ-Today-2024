@@ -28,7 +28,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       setNavCategory(0);
     }
   };
-  console.log(showSiteMenu);
+  // console.log(showSiteMenu);
   return (
     <div className="flex justify-end gap-[5px] lg:gap-[26px] items-center">
       {/* {showSiteMenu && <p>Site Menu</p>}
