@@ -70,7 +70,7 @@ export default function TakeoverNav() {
               className="mx-[35px] sx:ms-mx-[48px] md:mx-auto py-[50px] sm:py-[75px] md:py-[175px] md:max-w-[1130px] betweenLgMd:mx-[35px] mdLgPadding relative"
             >
               <div className="absolute right-0 z-50 top-[125px]">
-                <MenuCloseButton />
+                <MenuCloseButton borderCheck />
               </div>
               {navList.map((category, index) => {
                 const isFirst = index === 0;
