@@ -13,7 +13,7 @@ const MenuCloseButton = () => {
   return (
     <img
       src={closeIcon}
-      className="cursor-pointer p-[15px] border-[#000000] border-[2px] rounded-full hover:bg-tcnjyellow transition-all duration-500"
+      className="cursor-pointer p-[15px] border-[#000000] border-[2px] rounded-full hover:bg-gray-200 transition-all duration-500"
       alt="Close menu"
       onClick={closeButtonClick}
     />
