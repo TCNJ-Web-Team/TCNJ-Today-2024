@@ -40,7 +40,7 @@ function App() {
         >
           <TakeoverNav />
           <div
-            className="bg-white mx-auto py-[50px] px-[35px] md:max-w-[1130px] mdLgPadding relative
+            className="bg-white mx-auto lg:py-[100px] py-[50px] lg:px-0 px-[35px] md:max-w-[1130px] mdLgPadding relative
             
             "
           >

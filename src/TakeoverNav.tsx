@@ -3,6 +3,7 @@ import useStore from "./store/menusStore";
 import { AnimatePresence, motion } from "framer-motion";
 import navList from "./assets/nav-takeover-list.json";
 import "./styles/submenu-animation.scss";
+import MenuCloseButton from "./MenuCloseButton";
 // Define the type for individual items
 interface Item {
   title: string;
@@ -68,6 +69,9 @@ export default function TakeoverNav() {
               id="inner-takeover-nav"
               className="mx-[35px] sx:ms-mx-[48px] md:mx-auto py-[50px] sm:py-[75px] md:py-[175px] md:max-w-[1130px] betweenLgMd:mx-[35px] mdLgPadding relative"
             >
+              <div className="absolute right-0 z-50 hidden sm:block sm:top-[35px] md:top-[125px]">
+                <MenuCloseButton borderCheck />
+              </div>
               {navList.map((category, index) => {
                 const isFirst = index === 0;
                 const isLast = 4;
