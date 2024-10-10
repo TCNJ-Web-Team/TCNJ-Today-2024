@@ -15,9 +15,8 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
     closeSiteMenu();
   };
 
+  const screenWidth = window.innerWidth;
   const handleSiteMenuClick = () => {
-    const screenWidth = window.innerWidth;
-
     toggleSiteMenu();
     // Example for large screens (e.g., desktop)
 
@@ -29,6 +28,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       setNavCategory(0);
     }
   };
+  console.log(showSiteMenu);
   return (
     <div className="flex justify-end gap-[5px] lg:gap-[26px] items-center">
       {/* {showSiteMenu && <p>Site Menu</p>}
@@ -61,7 +61,9 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
         id="all-apps"
       >
         <img
-          src={`${TCNJ_URL}/icons/all-apps.svg`}
+          src={`${TCNJ_URL}/icons/${
+            showAppMenu && screenWidth < 550 ? `menu-x.svg` : `all-apps.svg`
+          }`}
           className="h-[25px] mx-auto"
           alt="All Apps"
         />
@@ -75,7 +77,9 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
         id="menu-button"
       >
         <img
-          src={`${TCNJ_URL}/icons/menu-lines.svg`}
+          src={`${TCNJ_URL}/icons/${
+            showSiteMenu && screenWidth < 550 ? `menu-x.svg` : `menu-lines.svg`
+          }`}
           className="h-[25px]  w-[25px] mx-auto"
           alt="Menu"
         />

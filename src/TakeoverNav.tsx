@@ -69,7 +69,7 @@ export default function TakeoverNav() {
               id="inner-takeover-nav"
               className="mx-[35px] sx:ms-mx-[48px] md:mx-auto py-[50px] sm:py-[75px] md:py-[175px] md:max-w-[1130px] betweenLgMd:mx-[35px] mdLgPadding relative"
             >
-              <div className="absolute right-0 z-50 top-[125px]">
+              <div className="absolute right-0 z-50 hidden sm:block sm:top-[35px] md:top-[125px]">
                 <MenuCloseButton borderCheck />
               </div>
               {navList.map((category, index) => {

@@ -52,7 +52,9 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       md:mx-[0px]
       md:w-[655px] sm:h-[650px]
       lg:w-[630px] md:max-h-[650px]  md:left-auto md:right-0
-      sm:overflow-auto"
+      sm:overflow-y-auto
+      sm:overflow-x-hidden
+      "
             >
               <div className="sticky  z-50 top-[0px] right-[0px] w-[100%] ">
                 <MenuCloseButton itemWidth={"15px"} rightAlign />
