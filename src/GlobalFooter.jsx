@@ -129,7 +129,7 @@ export default function GlobalFooter() {
           <div className="alignleft">
             <p className="copyright">
               <a href="https://news.tcnj.edu/world-wide-web-disclaimer/">
-                Copyright ©<span id="current-year"></span>
+                Copyright ©<span id="current-year">2024</span>
               </a>
               <a href="https://tcnj.qualtrics.com//SE/?SID=SV_bIYC9J406pClbHC">
                 Contact
@@ -138,12 +138,12 @@ export default function GlobalFooter() {
               <a href="https://tcnj.edu/accessibility/">Accessibility</a>
               <a href="https://heoa.tcnj.edu/">Consumer Info</a>
               <a href="https://privacy.tcnj.edu/">Privacy</a>
-              <a id="unit">2000 Pennington Road Ewing, NJ 08628-0718</a>
+              <a id="unit">2000 Pennington Road Ewing, NJ 08618</a>
             </p>
           </div>
           <div className="alignright">
             <p className="socialicons">
-              <a href="http://www.facebook.com/tcnjlions">
+              <a href="https://www.facebook.com/tcnjlions">
                 <img
                   width="24"
                   height="24"
@@ -151,7 +151,7 @@ export default function GlobalFooter() {
                   src="https://brand.tcnj.edu/wp-content/uploads/sites/11/2018/10/facebook-4-32.png"
                 />
               </a>
-              <a href="http://twitter.com/tcnj">
+              <a href="https://twitter.com/tcnj">
                 <img
                   width="24"
                   height="24"
@@ -167,7 +167,7 @@ export default function GlobalFooter() {
                   src="https://brand.tcnj.edu/wp-content/uploads/sites/11/2018/10/linkedin-4-32.png"
                 />
               </a>
-              <a href="http://instagram.com/tcnj_official">
+              <a href="https://instagram.com/tcnj_official">
                 <img
                   width="24"
                   height="24"
@@ -175,7 +175,7 @@ export default function GlobalFooter() {
                   src="https://brand.tcnj.edu/wp-content/uploads/sites/11/2018/10/instagram-4-32.png"
                 />
               </a>
-              <a href="http://www.youtube.com/tcnjvideo">
+              <a href="https://www.youtube.com/tcnjvideo">
                 <img
                   width="24"
                   height="24"
