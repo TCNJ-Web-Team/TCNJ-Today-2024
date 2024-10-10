@@ -54,8 +54,8 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       lg:w-[630px] md:max-h-[650px]  md:left-auto md:right-0
       sm:overflow-auto"
             >
-              <div className="sticky  z-50 top-[0px] right-[0px] w-[100%]">
-                <MenuCloseButton itemWidth={"10px"} rightAlign />
+              <div className="sticky  z-50 top-[0px] right-[0px] w-[100%] ">
+                <MenuCloseButton itemWidth={"15px"} rightAlign />
               </div>
               <div className="grid grid-cols-2  gap-y-[60px] sm:grid-cols-3  ">
                 {appList.map((item) => (
