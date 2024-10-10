@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import useStore from "./store/menusStore";
 
-const MenuCloseButton = (props) => {
+const MenuCloseButton = () => {
   const closeIcon = "https://today.tcnj.edu/custom/tcnj-today/icons/menu-x.svg";
   const { closeAppMenu, closeSiteMenu } = useStore();
 
@@ -12,17 +11,13 @@ const MenuCloseButton = (props) => {
   };
 
   return (
-    <div className="mx-[35px] sx:ms-mx-[48px] md:mx-auto md:max-w-[1130px] betweenLgMd:mx-[35px] mdLgPadding w-[100%]">
-      <img
-        src={closeIcon}
-        className="cursor-pointer p-[20px] border-[#000000] sticky top-[10px] right-[10px]" // Remove absolute from parent
-        alt="Close menu"
-        onClick={closeButtonClick}
-      />
-    </div>
+    <img
+      src={closeIcon}
+      className="cursor-pointer p-[15px] border-[#000000] border-[2px] rounded-full hover:bg-tcnjyellow transition-all duration-500"
+      alt="Close menu"
+      onClick={closeButtonClick}
+    />
   );
 };
-
-MenuCloseButton.propTypes = {};
 
 export default MenuCloseButton;

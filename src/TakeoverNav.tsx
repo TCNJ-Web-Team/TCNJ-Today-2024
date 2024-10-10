@@ -65,11 +65,13 @@ export default function TakeoverNav() {
             id="nav-takeover-list"
             className="w-[100%] h-[100%] bg-white bg-opacity-95 absolute top-0 left-0 z-10"
           >
-            <MenuCloseButton />
             <div
               id="inner-takeover-nav"
               className="mx-[35px] sx:ms-mx-[48px] md:mx-auto py-[50px] sm:py-[75px] md:py-[175px] md:max-w-[1130px] betweenLgMd:mx-[35px] mdLgPadding relative"
             >
+              <div className="absolute right-0 z-50 top-[125px]">
+                <MenuCloseButton />
+              </div>
               {navList.map((category, index) => {
                 const isFirst = index === 0;
                 const isLast = 4;
