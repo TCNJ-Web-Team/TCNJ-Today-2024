@@ -53,12 +53,27 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
             alt={item.name}
             className="h-[25px] mx-auto relative z-20"
           />
-          <span className="relative z-20">{item.name}</span>
+          <motion.span
+            className="relative z-20"
+            variants={{
+              initial: {
+                textShadow: "none",
+                // textDecoration: "none",
+              },
+              hover: {
+                textShadow: "1px 1px 0px rgba(255, 255, 255, 1)", // Adjust values as needed
+                // textDecoration: "underline",
+              },
+            }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+          >
+            {item.name}
+          </motion.span>
           <motion.span
             className={`absolute hidden sm:block
       h-[35px] w-[35px]
       z-10
-top-[20px]
+top-[19px]
       pointer-events-none`} // Add pointer-events-none to prevent interference with hover
             variants={{
               initial: {
@@ -78,13 +93,15 @@ top-[20px]
                 backgroundColor: "white",
                 // backgroundColor: "#ffffff",
                 opacity: 0.9,
+                // opacity: 0.75,
                 borderRadius: "50%",
+                // borderRadius: "5%",
                 borderBlockStyle: "solid",
                 borderColor: "black",
                 // borderWidth: "2px",
               },
             }}
-            transition={{ duration: 0.35, ease: "easeInOut" }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
           />
         </motion.a>
       ))}
