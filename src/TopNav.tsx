@@ -55,7 +55,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
           />
           {item.name}
           <motion.span
-            className={`absolute bottom-[4px] left-0 h-[.7px] 
+            className={`absolute bottom-[4px] left-0 h-[1px] 
     hidden sm:block`}
             variants={{
               // Define the animation variants
