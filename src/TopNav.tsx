@@ -75,9 +75,9 @@ top-[20px]
               },
               hover: {
                 scale: 2,
-                backgroundColor: "#fded94",
+                backgroundColor: "white",
                 // backgroundColor: "#ffffff",
-                opacity: 1,
+                opacity: 0.9,
                 borderRadius: "50%",
                 borderBlockStyle: "solid",
                 borderColor: "black",
