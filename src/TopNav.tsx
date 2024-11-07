@@ -57,9 +57,8 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
           <motion.span
             className={`absolute hidden sm:block
       h-[35px] w-[35px]
-      top-[6px]
       z-10
-
+top-[20px]
       pointer-events-none`} // Add pointer-events-none to prevent interference with hover
             variants={{
               initial: {
@@ -69,11 +68,13 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
                 borderRadius: "50%",
                 borderBlockStyle: "solid",
                 borderColor: "black",
-                // borderWidth: "2px",
                 backgroundColor: "#fded94",
+
+                // borderWidth: "2px",
+                // backgroundColor: "#fded94",
               },
               hover: {
-                scale: 1.35,
+                scale: 2,
                 backgroundColor: "#fded94",
                 // backgroundColor: "#ffffff",
                 opacity: 1,
