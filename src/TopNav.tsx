@@ -92,7 +92,7 @@ top-[19px]
                 scale: 2,
                 backgroundColor: "white",
                 // backgroundColor: "#ffffff",
-                opacity: 0.75,
+                opacity: 1,
                 // opacity: 0.75,
                 borderRadius: "50%",
                 // borderRadius: "5%",
