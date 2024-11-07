@@ -37,37 +37,50 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
       {topNavItems.map((item, index) => (
         // Inside your map function, modify the motion.a and motion.span like this:
         <motion.a
-          className="
-    md:block hidden cursor-pointer relative
+          className="align-middle md:flex items-center justify-center flex-col z-20
+   hidden cursor-pointer relative
     text-center leading-[35px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[0px] pb-[2.5px]
     transition-all duration-500"
           href={item.url}
           key={item.id}
           initial="initial"
-          whileHover="hover" // This tells framer-motion to use the hover variant when the element is hovered
+          whileHover="hover"
         >
           <img
             src={`${TCNJ_URL}/icons/${item.name
               .toLowerCase()
               .replace(/\s+/g, "-")}-micro.svg`}
             alt={item.name}
-            className="h-[25px] mx-auto"
+            className="h-[25px] mx-auto relative z-20"
           />
-          {item.name}
+          <span className="relative z-20">{item.name}</span>
           <motion.span
-            className={`absolute bottom-[2px] left-0 h-[1.5px] 
-    hidden sm:block`}
+            className={`absolute hidden sm:block
+      h-[35px] w-[35px]
+      top-[6px]
+      z-10
+
+      pointer-events-none`} // Add pointer-events-none to prevent interference with hover
             variants={{
-              // Define the animation variants
               initial: {
-                width: 0,
-                backgroundColor: "#000",
+                scale: 0.5, // Start at half size
+                // backgroundColor: "white",
                 opacity: 0,
+                borderRadius: "50%",
+                borderBlockStyle: "solid",
+                borderColor: "black",
+                // borderWidth: "2px",
+                backgroundColor: "#fded94",
               },
               hover: {
-                width: "100%",
-                backgroundColor: "#000",
+                scale: 1.35,
+                backgroundColor: "#fded94",
+                // backgroundColor: "#ffffff",
                 opacity: 1,
+                borderRadius: "50%",
+                borderBlockStyle: "solid",
+                borderColor: "black",
+                // borderWidth: "2px",
               },
             }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
