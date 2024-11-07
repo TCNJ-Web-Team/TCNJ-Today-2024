@@ -74,12 +74,14 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
           />
         </motion.a>
       ))}
-      <a
-        className="
-          cursor-pointer text-center leading-[35px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[10px] sm:pb-[2.5px]
-          hover:bg-white transition-all duration-500"
+      <motion.a
+        className="relative
+          cursor-pointer text-center leading-[35px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[0px] pb-[10px] sm:pb-[2.5px]
+          transition-all duration-500"
         onClick={handleAppMenuClick}
         id="all-apps"
+        initial="initial"
+        whileHover="hover"
       >
         <img
           src={`${TCNJ_URL}/icons/${
@@ -89,13 +91,33 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
           alt="All Apps"
         />
         <span className="hidden sm:block">All Apps</span>
-      </a>
-      <a
-        className="
-          cursor-pointer text-center leading-[35px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[10px] pb-[10px] sm:pb-[2.5px]
-          hover:bg-white transition-all duration-500"
+        <motion.span
+          className={`absolute bottom-[4px] left-0 h-[1px] 
+    hidden sm:block`}
+          variants={{
+            // Define the animation variants
+            initial: {
+              width: 0,
+              backgroundColor: "#000",
+              opacity: 0,
+            },
+            hover: {
+              width: "100%",
+              backgroundColor: "#000",
+              opacity: 1,
+            },
+          }}
+          transition={{ duration: 0.35, ease: "easeInOut" }}
+        />
+      </motion.a>
+      <motion.a
+        className="relative
+          cursor-pointer text-center leading-[35px] text-[14px] text-[600] font-opensans text-[#000000] pt-[10px] px-[0px] pb-[10px] sm:pb-[2.5px]
+          transition-all duration-500"
         onClick={handleSiteMenuClick}
         id="menu-button"
+        initial="initial"
+        whileHover="hover"
       >
         <img
           src={`${TCNJ_URL}/icons/${
@@ -105,7 +127,25 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
           alt="Menu"
         />
         <span className="hidden sm:block">Menu</span>
-      </a>
+        <motion.span
+          className={`absolute bottom-[4px] left-0 h-[1px] 
+    hidden sm:block`}
+          variants={{
+            // Define the animation variants
+            initial: {
+              width: 0,
+              backgroundColor: "#000",
+              opacity: 0,
+            },
+            hover: {
+              width: "100%",
+              backgroundColor: "#000",
+              opacity: 1,
+            },
+          }}
+          transition={{ duration: 0.35, ease: "easeInOut" }}
+        />
+      </motion.a>
     </div>
   );
 };
