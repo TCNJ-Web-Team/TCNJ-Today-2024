@@ -82,6 +82,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
         id="all-apps"
         initial="initial"
         whileHover="hover"
+        animate={showAppMenu ? "active" : "initial"}
       >
         <img
           src={`${TCNJ_URL}/icons/${
@@ -106,6 +107,12 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
               backgroundColor: "#000",
               opacity: 1,
             },
+            active: {
+              // Add active variant
+              width: "100%",
+              backgroundColor: "#000",
+              opacity: 1,
+            },
           }}
           transition={{ duration: 0.35, ease: "easeInOut" }}
         />
@@ -118,6 +125,7 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
         id="menu-button"
         initial="initial"
         whileHover="hover"
+        animate={showSiteMenu ? "active" : "initial"}
       >
         <img
           src={`${TCNJ_URL}/icons/${
@@ -138,6 +146,12 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
               opacity: 0,
             },
             hover: {
+              width: "100%",
+              backgroundColor: "#000",
+              opacity: 1,
+            },
+            active: {
+              // Add active variant
               width: "100%",
               backgroundColor: "#000",
               opacity: 1,
