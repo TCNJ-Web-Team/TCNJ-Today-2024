@@ -77,7 +77,7 @@ top-[19px]
       pointer-events-none`} // Add pointer-events-none to prevent interference with hover
             variants={{
               initial: {
-                scale: 0.5, // Start at half size
+                scale: 1.5, // Start at half size
                 // backgroundColor: "white",
                 opacity: 0,
                 borderRadius: "50%",
@@ -92,7 +92,7 @@ top-[19px]
                 scale: 2,
                 backgroundColor: "white",
                 // backgroundColor: "#ffffff",
-                opacity: 0.9,
+                opacity: 0.75,
                 // opacity: 0.75,
                 borderRadius: "50%",
                 // borderRadius: "5%",
