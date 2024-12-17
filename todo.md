@@ -1,3 +1,11 @@
+## Meeting Notes 11-18-24
+
+- develop banner ad area
+- on mobile have white bg span full height of div
+- seach bar to ALL APPS drawer
+- rule below icons to sep
+- heat map for most used apps?
+
 pawprint logo, site active? student experience
 top menu bar animation
 
