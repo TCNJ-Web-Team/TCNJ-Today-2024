@@ -3,182 +3,242 @@
     "id": 0,
     "name": "Google Apps",
     "url": "http://mail.tcnj.edu/",
-    "topNav": true
+    "topNav": true,
+    "popular": true,
+    "portal": false
   },
   {
     "id": 1,
     "name": "Canvas",
     "url": "https://tcnj.instructure.com/login",
-    "topNav": true
+    "topNav": true,
+    "popular": true,
+    "portal": false
   },
   {
     "id": 2,
     "name": "PAWS",
     "url": "https://sso-9af1696c.sso.duosecurity.com/saml2/sp/DI4MGFZILBCQCED5WZIV/sso",
-    "topNav": true
+    "topNav": true,
+    "popular": true,
+    "portal": false
   },
   {
     "id": 3,
     "name": "Oracle Cloud",
     "url": "https://sso-9af1696c.sso.duosecurity.com/saml2/sp/DIKUZD7UDUNCUNNOAZIU/sso",
-    "topNav": true
+    "topNav": true,
+    "popular": true,
+    "portal": false
   },
   {
     "id": 4,
     "name": "Taleo",
     "url": "https://tcnj.taleo.net/",
-    "topNav": false
+    "topNav": false,
+    "popular": true,
+    "portal": false
   },
   {
     "id": 5,
     "name": "IT Help Desk",
     "url": "https://tcnj.teamdynamix.com/TDClient/Home/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": true
   },
   {
     "id": 6,
     "name": "Work Order",
     "url": "https://tcnj.teamdynamix.com/TDClient/3283/FacilitiesPortal/Home/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": true
   },
   {
     "id": 7,
     "name": "HR Portal",
     "url": "https://tcnj.teamdynamix.com/TDClient/3286/HRPortal/Home/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": true
   },
   {
     "id": 8,
     "name": "Payroll Portal",
     "url": "https://tcnj.teamdynamix.com/TDClient/3277/PayrollPortal/Home/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": true
   },
   {
     "id": 9,
     "name": "Account",
     "url": "https://account.tcnj.edu/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 10,
     "name": "Roar",
     "url": "https://tcnj.campusapp.com/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 11,
     "name": "Virtual Apps",
     "url": "https://tcnj.edu/apps",
-    "topNav": false
+    "topNav": false,
+    "popular": true,
+    "portal": false
   },
   {
     "id": 12,
     "name": "Handshake",
     "url": "https://tcnj.joinhandshake.com/login",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
 
   {
     "id": 14,
     "name": "Learning",
     "url": "https://sso-9af1696c.sso.duosecurity.com/saml2/sp/DI3ROWCNJY8KQBR9IUVJ/sso",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 15,
     "name": "All Voices",
     "url": "https://tcnj.allvoices.co/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 16,
     "name": "ADP",
     "url": "https://sso-9af1696c.sso.duosecurity.com/saml2/sp/DIH7ZF21SB2HH0J08J7K/sso",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 17,
     "name": "OWL",
     "url": "https://tcnj.medicatconnect.com/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 18,
     "name": "CT Dollars",
     "url": "https://tcnj-sp.transactcampus.com/CTDollars",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 19,
     "name": "Get It Card",
     "url": "https://tcnj-sp.transactcampus.com/GetIT",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 20,
     "name": "Qualtrics",
     "url": "http://tcnj.qualtrics.com/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 21,
     "name": "Student Feedback",
     "url": "https://login.watermarkinsights.com/saml-initiate/thecollegeofnewjersey",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 22,
     "name": "Book-It!",
     "url": "https://bookit.tcnj.edu/EmsWebApp/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 23,
     "name": "OneAegis",
     "url": "https://tcnj.oneaegis.com/Login.aspx/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 24,
     "name": "PrintSense",
     "url": "https://printing.tcnj.edu/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 25,
     "name": "My Housing",
     "url": "https://tcnj.starrezhousing.com/StarRezPortalX/InitiateLogin/StarNet.Core.AuthProviders.Shibboleth",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 26,
     "name": "Study Abroad",
     "url": "https://studyabroad.tcnj.edu/index.cfm?FuseAction=Programs.AdvancedSearch",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 27,
     "name": "Faculty Process",
     "url": "https://iam-api.interfolio.com/users/sso_redirect?tenant_id=15624",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 28,
     "name": "CITI Program",
     "url": "https://www.citiprogram.org/index.cfm?pageID=14",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 29,
     "name": "Grants",
     "url": "https://academicgrants.tcnj.edu/how-do-i/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 30,
     "name": "D. Measures",
     "url": "https://academicaffairs.tcnj.edu/digital-measures/",
-    "topNav": false
+    "topNav": false,
+    "popular": false,
+    "portal": false
   },
   {
     "id": 31,
