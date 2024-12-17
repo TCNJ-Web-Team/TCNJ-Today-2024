@@ -23,9 +23,20 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
   };
   // console.log(MY_GLOBAL); // 'my-global-value'
   // console.log(TCNJ_URL); // 'https://api.example.com'
-  const popularOrder = appList.filter((app) => {
-    return app.popular;
-  });
+  // const popularOrder = appList.filter((app) => {
+  //   return app.popular;
+  // });
+
+  const popularOrder = appList
+    .sort((a, b) => {
+      // Put Google Apps first
+      if (a.name === "Google Apps") return -1;
+      if (b.name === "Google Apps") return 1;
+      return 0;
+    })
+    .filter((app) => {
+      return app.popular;
+    });
   const portalList = appList.filter((app) => {
     return app.portal;
   });
@@ -69,12 +80,13 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       
       sm:shadow-3xl 
       sm:border-[1px] sm:border-[#e0e0e0]
-      pt-[47px] pb-[50px]
-      
+      pt-[50px] pb-[50px]
+      sm:pt-[70px]
       sm:top-[10px] 
       sm:w-[calc(100%-100px)]
       sm:mx-[50px]
       sm:px-[3%]
+      md:pt-[75px]
       md:px-[40px]
       md:mx-[0px]
       md:w-[655px] sm:h-[650px]
@@ -83,12 +95,12 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       sm:overflow-x-hidden
       "
             >
-              <div className="sticky  z-50 top-[0px] right-[0px] w-[100%] ">
+              <div className="sticky  z-50 top-[0px]  right-[0px] w-[100%] ">
                 <MenuCloseButton itemWidth={"15px"} rightAlign />
               </div>
-              <div className="grid grid-cols-2 gap-y-[40px] sm:gap-y-[60px] sm:grid-cols-3  ">
+              <div className="grid grid-cols-2 gap-y-[40px] sm:gap-y-[45px] sm:grid-cols-3  ">
                 <motion.h2
-                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[25px] mb-[-10px] text-[#000000] uppercase"
+                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[25px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
@@ -134,7 +146,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   }}
                 />
                 <motion.h2
-                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[25px] mb-[-10px] text-[#000000] uppercase"
+                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[25px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
@@ -180,7 +192,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   }}
                 />
                 <motion.h2
-                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[25px] mb-[-10px] text-[#000000] uppercase"
+                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[25px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
