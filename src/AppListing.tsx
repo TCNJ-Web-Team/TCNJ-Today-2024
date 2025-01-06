@@ -86,11 +86,11 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       sm:w-[calc(100%-100px)]
       sm:mx-[50px]
       sm:px-[3%]
-      md:pt-[75px]
-      md:px-[40px]
+      md:pt-[60px]
+      md:px-[60px]
       md:mx-[0px]
       md:w-[655px] sm:h-[650px]
-      lg:w-[630px] md:max-h-[650px]  md:left-auto md:right-0
+      lg:w-[575px] md:max-h-[650px]  md:left-auto md:right-0
       sm:overflow-y-auto
       sm:overflow-x-hidden
       "
@@ -98,9 +98,9 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
               <div className="sticky  z-50 top-[0px]  right-[0px] w-[100%] ">
                 <MenuCloseButton itemWidth={"15px"} rightAlign />
               </div>
-              <div className="grid grid-cols-2 gap-y-[40px] sm:gap-y-[45px] sm:grid-cols-3  ">
+              <div className="grid grid-cols-2 gap-y-[40px] sm:gap-y-[45px] lg:grid-cols-[repeat(3,minmax(0,125px))] lg:gap-x-[35px] ">
                 <motion.h2
-                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[25px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
+                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[0px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
@@ -112,7 +112,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   <motion.a
                     className="icon-link text-center leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] 
           h-[93px]
-          block"
+          block lg:max-w-[125px]"
                     // onClick={() => handleLinkClick(item.url)}
                     href={item.url}
                     key={item.id}
@@ -139,14 +139,14 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   </motion.a>
                 ))}
                 <motion.hr
-                  className="col-span-2 sm:col-span-3 my-[5px] border-gray-200 ml-[25px] mr-[25px]"
+                  className="col-span-2 sm:col-span-3 my-[5px] border-gray-200 ml-[0px] mr-[25px] lg:w-[100%]"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
                   }}
                 />
                 <motion.h2
-                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[25px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
+                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[0px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
@@ -158,7 +158,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   <motion.a
                     className="icon-link text-center leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] 
           h-[93px]
-          block"
+          block lg:max-w-[125px]"
                     // onClick={() => handleLinkClick(item.url)}
                     href={item.url}
                     key={item.id}
@@ -185,14 +185,14 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   </motion.a>
                 ))}
                 <motion.hr
-                  className="col-span-2 sm:col-span-3 my-[5px] border-gray-200 ml-[25px] mr-[25px]"
+                  className="col-span-2 sm:col-span-3 my-[5px] border-gray-200 ml-[0px] mr-[25px] lg:w-[100%]"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
                   }}
                 />
                 <motion.h2
-                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[25px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
+                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[0px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
@@ -204,7 +204,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   <motion.a
                     className="icon-link text-center leading-[30px] text-[14px] font-[600] font-opensans text-[#000000] 
           h-[93px]
-          block"
+          block lg:max-w-[125px]"
                     // onClick={() => handleLinkClick(item.url)}
                     href={item.url}
                     key={item.id}
