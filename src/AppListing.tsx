@@ -123,6 +123,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
           block lg:max-w-[125px]"
                     // onClick={() => handleLinkClick(item.url)}
                     href={item.url}
+                    id={item.name}
                     key={item.id}
                     variants={{
                       hidden: { opacity: 0, y: -5 },
@@ -134,14 +135,22 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                         .toLowerCase()
                         .replace(/\s+/g, "-")}.svg`}
                       alt={item.name}
-                      className="h-[55px] mx-auto mb-[15px] outline-icon"
+                      className={`mx-auto mb-[15px] outline-icon ${
+                        item.name === "Oracle Cloud"
+                          ? "pt-[10px] h-[55px]"
+                          : "h-[55px]"
+                      }`}
                     />
                     <img
                       src={`${TCNJ_URL}/final-icons/color/${item.name
                         .toLowerCase()
                         .replace(/\s+/g, "-")}.svg`}
                       alt={item.name}
-                      className="h-[55px] mx-auto mb-[15px] color-icon"
+                      className={`mx-auto mb-[15px] color-icon ${
+                        item.name === "Oracle Cloud"
+                          ? "pt-[10px] h-[55px]"
+                          : "h-[55px]"
+                      }`}
                     />
                     <p>{item.name}</p>
                   </motion.a>
@@ -169,6 +178,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
           block lg:max-w-[125px]"
                     // onClick={() => handleLinkClick(item.url)}
                     href={item.url}
+                    id={item.name}
                     key={item.id}
                     variants={{
                       hidden: { opacity: 0, y: -5 },
@@ -180,14 +190,22 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                         .toLowerCase()
                         .replace(/\s+/g, "-")}.svg`}
                       alt={item.name}
-                      className="h-[55px] mx-auto mb-[15px] outline-icon"
+                      className={`mx-auto mb-[15px] outline-icon ${
+                        item.name === "Oracle Cloud"
+                          ? "pt-[10px] h-[55px]"
+                          : "h-[55px]"
+                      }`}
                     />
                     <img
                       src={`${TCNJ_URL}/final-icons/color/${item.name
                         .toLowerCase()
                         .replace(/\s+/g, "-")}.svg`}
                       alt={item.name}
-                      className="h-[55px] mx-auto mb-[15px] color-icon"
+                      className={`mx-auto mb-[15px] color-icon ${
+                        item.name === "Oracle Cloud"
+                          ? "pt-[10px] h-[55px]"
+                          : "h-[55px]"
+                      }`}
                     />
                     <p>{item.name}</p>
                   </motion.a>
@@ -215,6 +233,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
           block lg:max-w-[125px]"
                     // onClick={() => handleLinkClick(item.url)}
                     href={item.url}
+                    id={item.name}
                     key={item.id}
                     variants={{
                       hidden: { opacity: 0, y: -5 },
@@ -226,14 +245,26 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                         .toLowerCase()
                         .replace(/\s+/g, "-")}.svg`}
                       alt={item.name}
-                      className="h-[55px] mx-auto mb-[15px] outline-icon"
+                      className={`mx-auto mb-[15px] outline-icon ${
+                        item.name === "Oracle Cloud"
+                          ? "pt-[10px] h-[55px]"
+                          : item.name === "Get It Card"
+                          ? "pt-[20px] h-[55px]"
+                          : "h-[55px]"
+                      }`}
                     />
                     <img
                       src={`${TCNJ_URL}/final-icons/color/${item.name
                         .toLowerCase()
                         .replace(/\s+/g, "-")}.svg`}
                       alt={item.name}
-                      className="h-[55px] mx-auto mb-[15px] color-icon"
+                      className={`mx-auto mb-[15px] color-icon ${
+                        item.name === "Oracle Cloud"
+                          ? "pt-[10px] h-[55px]"
+                          : item.name === "Get It Card"
+                          ? "pt-[20px] h-[55px]"
+                          : "h-[55px]"
+                      }`}
                     />
                     <p>{item.name}</p>
                   </motion.a>
