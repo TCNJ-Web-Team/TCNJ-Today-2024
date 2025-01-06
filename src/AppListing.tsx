@@ -98,9 +98,9 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
               <div className="sticky  z-50 top-[0px]  right-[0px] w-[100%] ">
                 <MenuCloseButton itemWidth={"15px"} rightAlign />
               </div>
-              <div className="grid grid-cols-2 gap-y-[40px] sm:gap-y-[45px] lg:grid-cols-[repeat(3,minmax(0,125px))] lg:gap-x-[35px] ">
+              <div className="grid grid-cols-2 gap-y-[45px]  sm:gap-y-[45px] lg:grid-cols-[repeat(3,minmax(0,125px))] lg:gap-x-[35px] px-[25px] sm:px-0">
                 <motion.h2
-                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[0px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
+                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[0px] mb-[-15px] sm:mb-[-12.5px] text-[#000000] uppercase"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
@@ -139,14 +139,14 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   </motion.a>
                 ))}
                 <motion.hr
-                  className="col-span-2 sm:col-span-3 my-[5px] border-gray-200 ml-[0px] mr-[25px] lg:w-[100%]"
+                  className="col-span-2 sm:col-span-3 my-[5px] border-gray-200 ml-[0px] mr-[25px] w-[100%]"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
                   }}
                 />
                 <motion.h2
-                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[0px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
+                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[0px] mb-[-15px] sm:mb-[-12.5px] text-[#000000] uppercase"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
@@ -185,14 +185,14 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   </motion.a>
                 ))}
                 <motion.hr
-                  className="col-span-2 sm:col-span-3 my-[5px] border-gray-200 ml-[0px] mr-[25px] lg:w-[100%]"
+                  className="col-span-2 sm:col-span-3 my-[5px] border-gray-200 ml-[0px] mr-[25px] w-[100%]"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
                   }}
                 />
                 <motion.h2
-                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[0px] mb-[-10px] sm:mb-[-12.5px] text-[#000000] uppercase"
+                  className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[0px] mb-[-15px] sm:mb-[-12.5px] text-[#000000] uppercase"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
