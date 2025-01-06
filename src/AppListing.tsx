@@ -80,7 +80,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       
       sm:shadow-3xl 
       sm:border-[1px] sm:border-[#e0e0e0]
-      pt-[50px] pb-[50px]
+      pt-[50px] pb-[60px]
       sm:pt-[70px]
       sm:top-[10px] 
       sm:w-[calc(100%-80px)]
@@ -91,8 +91,8 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       md:pt-[60px]
       md:px-[60px]
       md:mx-[0px]
-      md:w-[575px] sm:h-[650px]
-      lg:w-[575px] md:max-h-[650px]  md:left-auto md:right-0
+      md:w-[575px] h-[100%] sm:h-[75vh]
+      lg:w-[575px] md:max-h-[75vh]  md:left-auto md:right-0
       sm:overflow-y-auto
       sm:overflow-x-hidden
       "
