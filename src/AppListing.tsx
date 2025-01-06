@@ -83,13 +83,15 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       pt-[50px] pb-[50px]
       sm:pt-[70px]
       sm:top-[10px] 
-      sm:w-[calc(100%-100px)]
-      sm:mx-[50px]
+      sm:w-[calc(100%-80px)]
+      sm:left-0
+      sm:right-0
+      sm:mx-auto
       sm:px-[3%]
       md:pt-[60px]
       md:px-[60px]
       md:mx-[0px]
-      md:w-[655px] sm:h-[650px]
+      md:w-[575px] sm:h-[650px]
       lg:w-[575px] md:max-h-[650px]  md:left-auto md:right-0
       sm:overflow-y-auto
       sm:overflow-x-hidden
@@ -143,7 +145,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   </motion.a>
                 ))}
                 <motion.hr
-                  className="col-span-2 sm:col-span-3 my-[5px] border-gray-200 ml-[0px] mr-[25px] w-[100%]"
+                  className="col-span-2 sm:col-span-3 my-[5px] border-[#707070] ml-[0px] mr-[25px] w-[100%]"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
@@ -189,7 +191,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   </motion.a>
                 ))}
                 <motion.hr
-                  className="col-span-2 sm:col-span-3 my-[5px] border-gray-200 ml-[0px] mr-[25px] w-[100%]"
+                  className="col-span-2 sm:col-span-3 my-[5px] border-[#707070] ml-[0px] mr-[25px] w-[100%]"
                   variants={{
                     hidden: { opacity: 0, y: -5 },
                     show: { opacity: 1, y: 0 },
