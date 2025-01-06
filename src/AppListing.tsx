@@ -98,7 +98,11 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
               <div className="sticky  z-50 top-[0px]  right-[0px] w-[100%] ">
                 <MenuCloseButton itemWidth={"15px"} rightAlign />
               </div>
-              <div className="grid grid-cols-2 gap-y-[45px]  sm:gap-y-[45px] lg:grid-cols-[repeat(3,minmax(0,125px))] lg:gap-x-[35px] px-[25px] sm:px-0">
+              <div
+                className="grid grid-cols-2 gap-y-[45px]  sm:gap-y-[45px] sm:grid-cols-[repeat(3,minmax(0,1fr))] 
+              lg:grid-cols-[repeat(3,minmax(0,125px))] 
+              lg:gap-x-[35px] px-[25px] sm:px-0"
+              >
                 <motion.h2
                   className="col-span-2 sm:col-span-3 font-interstate text-[18px] font-[900] leading-[25px] ml-[0px] mb-[-15px] sm:mb-[-12.5px] text-[#000000] uppercase"
                   variants={{
