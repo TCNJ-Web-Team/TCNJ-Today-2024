@@ -28,7 +28,7 @@ const MenuCloseButton: React.FC<MenuCloseButtonProps> = ({
       ${
         borderCheck
           ? `border-[0px]`
-          : "mt-[-70px] md:mt-[-60px] hidden sm:block sm:mr-[3%] md:mr-[-20px]  sm:border-[#e0e0e0] rounded-none border-t-0 border-r-0"
+          : "mt-[-70px] md:mt-[-60px] hidden sm:block sm:mr-[-4%] betweenSmMd:pt-[50px] betweenSmMd:mr-[25px] md:mr-[-20px]  sm:border-[#e0e0e0] rounded-none border-t-0 border-r-0"
       }
       `}
       alt="Close menu"

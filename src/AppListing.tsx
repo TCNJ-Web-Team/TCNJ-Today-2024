@@ -88,6 +88,8 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
       sm:right-0
       sm:mx-auto
       sm:px-[60px]
+      betweenSmMd:px-[3%]
+      betweenSmMd:pt-[40px]
       md:pt-[60px]
       md:px-[60px]
       md:mx-[0px]
