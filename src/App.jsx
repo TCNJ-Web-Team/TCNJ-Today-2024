@@ -11,6 +11,14 @@ import TakeoverNav from "./TakeoverNav.tsx";
 const topMenuIcons = data.filter((app) => app.topNav === true);
 
 function App() {
+  const phpData = window.PHP_DATA;
+  // const phpData = {
+  //   bannerImage:
+  //     "http://localhost:10057/wp-content/uploads/2024/12/parent-family-site-billboard-2-FINAL.jpg",
+  //   // bannerLink: "https://tcnj.edu",
+  //   bannerAlt: "ALTERNATIVE TEST",
+  // };
+  // console.log(phpData);
   return (
     <>
       {/* <StaggeredList /> */}
@@ -29,7 +37,7 @@ function App() {
           </h1>
           <TopNav topNavItems={topMenuIcons} />
         </div>
-        {/* PHP GOES HERE FOR BANNER */}
+
         <div
           className="bg-white  border-tcnjyellow 
           border-l-[15px] border-r-[15px]
@@ -39,11 +47,35 @@ function App() {
           relative
           "
         >
+          {/* PHP GOES HERE FOR BANNER */}
+          {phpData != undefined &&
+            phpData.bannerImage !== "" &&
+            phpData.bannerImage.length > 0 && (
+              <div
+                id="banner-takeover"
+                className="bg-white mx-auto lg:px-0 px-[35px] md:max-w-[1130px] mdLgPadding relative
+                md:pt-[75px] pt-[35px]
+           "
+              >
+                {phpData.bannerLink ? (
+                  <a href={phpData.bannerLink}>
+                    <img src={phpData.bannerImage} alt={phpData.bannerAlt} />
+                  </a>
+                ) : (
+                  <img src={phpData.bannerImage} alt={phpData.bannerAlt} />
+                )}
+              </div>
+            )}
           <TakeoverNav />
           <div
-            className="bg-white mx-auto lg:py-[100px] py-[50px] lg:px-0 px-[35px] md:max-w-[1130px] mdLgPadding relative
+            className={`bg-white mx-auto lg:py-[100px] py-[50px] lg:px-0 px-[35px] md:max-w-[1130px] mdLgPadding relative
             pb-[200px] sm:pb-[50px]
-            "
+            ${
+              phpData.bannerImage !== "" && phpData.bannerImage.length > 0
+                ? "lg:pt-[35px] pt-[15px]"
+                : ""
+            }
+            `}
           >
             <AppListing appList={data} />
             <TagBoardContent />
