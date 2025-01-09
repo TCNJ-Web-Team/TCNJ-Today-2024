@@ -156,7 +156,14 @@ export default function TakeoverNav() {
                             },
                             show: {
                               opacity: 1,
-                              transition: { staggerChildren: 0.0651 },
+                              // transition: { staggerChildren: 0.0651 },
+                              transition: {
+                                staggerChildren: window.matchMedia(
+                                  "(min-width: 640px)"
+                                ).matches
+                                  ? 0.0651
+                                  : 0,
+                              },
                               zIndex: 1,
                               height: "auto",
                             },
