@@ -29,6 +29,7 @@ function App() {
           </h1>
           <TopNav topNavItems={topMenuIcons} />
         </div>
+        {/* PHP GOES HERE FOR BANNER */}
         <div
           className="bg-white  border-tcnjyellow 
           border-l-[15px] border-r-[15px]
