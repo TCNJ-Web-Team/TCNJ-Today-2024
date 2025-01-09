@@ -245,5 +245,11 @@
     "name": "Concur",
     "url": "https://travel.tcnj.edu/concur/",
     "topNav": false
+  },
+  {
+    "id": 32,
+    "name": "Paw Print",
+    "url": "https://pawprint.tcnj.edu",
+    "topNav": false
   }
 ]
