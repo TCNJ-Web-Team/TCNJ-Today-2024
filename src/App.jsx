@@ -15,7 +15,7 @@ function App() {
   const phpData = {
     bannerImage:
       "http://localhost:10057/wp-content/uploads/2024/12/parent-family-site-billboard-2-FINAL.jpg",
-    // bannerLink: "https://tcnj.edu",
+    bannerLink: "https://tcnj.edu",
     bannerAlt: "ALTERNATIVE TEST",
   };
   console.log(phpData);
@@ -47,45 +47,45 @@ function App() {
           relative
           "
         >
-          {/* PHP GOES HERE FOR BANNER */}
-          {phpData != undefined &&
-            phpData.bannerImage !== "" &&
-            phpData.bannerImage.length > 0 && (
-              <div
-                id="banner-takeover"
-                className="bg-white mx-auto lg:px-0 px-[35px] md:max-w-[1130px] mdLgPadding relative
-                md:pt-[75px] pt-[35px]
-           "
-              >
-                {phpData.bannerLink ? (
-                  <a href={phpData.bannerLink}>
-                    <img
-                      src={phpData.bannerImage}
-                      alt={phpData.bannerAlt}
-                      className="w-[100%]"
-                    />
-                  </a>
-                ) : (
-                  <img
-                    src={phpData.bannerImage}
-                    alt={phpData.bannerAlt}
-                    className="w-[100%]"
-                  />
-                )}
-              </div>
-            )}
           <TakeoverNav />
           <div
             className={`bg-white mx-auto lg:py-[100px] py-[50px] lg:px-0 px-[35px] md:max-w-[1130px] mdLgPadding relative
             pb-[200px] sm:pb-[50px]
             ${
               phpData.bannerImage !== "" && phpData.bannerImage.length > 0
-                ? "lg:pt-[35px] pt-[15px]"
+                ? "lg:pt-[75px] pt-[15px]"
                 : ""
             }
             `}
           >
             <AppListing appList={data} />
+            {/* PHP GOES HERE FOR BANNER */}
+            {phpData != undefined &&
+              phpData.bannerImage !== "" &&
+              phpData.bannerImage.length > 0 && (
+                <div
+                  id="banner-takeover"
+                  className="bg-white mx-auto px-[6px] relative
+                pt-[35px] lg:pt-[0px] pb-[15px] md:pb-[35px]
+           "
+                >
+                  {phpData.bannerLink ? (
+                    <a href={phpData.bannerLink}>
+                      <img
+                        src={phpData.bannerImage}
+                        alt={phpData.bannerAlt}
+                        className="w-[100%]"
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={phpData.bannerImage}
+                      alt={phpData.bannerAlt}
+                      className="w-[100%]"
+                    />
+                  )}
+                </div>
+              )}
             <TagBoardContent />
           </div>
         </div>

@@ -77,7 +77,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
               exit={{ opacity: 0, y: -10 }}
               id="app-list"
               className="absolute top-0 left-0 w-[100%] max-h-[100%] bg-[rgba(255,255,255,0.95)]
-      
+      z-10
       sm:shadow-3xl 
       sm:border-[1px] sm:border-[#e0e0e0]
       pt-[50px] pb-[60px]
