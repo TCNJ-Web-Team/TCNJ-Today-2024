@@ -129,7 +129,8 @@ export default function GlobalFooter() {
           <div className="alignleft">
             <p className="copyright">
               <a href="https://news.tcnj.edu/world-wide-web-disclaimer/">
-                Copyright ©<span id="current-year">2024</span>
+                {/* Copyright ©<span id="current-year">2025</span> */}
+                Copyright ©{new Date().getFullYear()}
               </a>
               <a href="https://tcnj.qualtrics.com//SE/?SID=SV_bIYC9J406pClbHC">
                 Contact

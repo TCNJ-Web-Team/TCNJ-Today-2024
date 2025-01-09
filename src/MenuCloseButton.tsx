@@ -22,13 +22,13 @@ const MenuCloseButton: React.FC<MenuCloseButtonProps> = ({
     <img
       src={closeIcon}
       className={`cursor-pointer border-[#e0e0e0] hover:bg-gray-200 transition-all duration-500 ${
-        !borderCheck ? "absolute top-[0px] right-[-20px] w-[50px]" : ""
+        !borderCheck ? "absolute top-[0px] right-[-40px] w-[48px]" : ""
       }
       ${itemWidth ? `p-[${itemWidth}]` : "p-[15px]"} 
       ${
         borderCheck
           ? `border-[0px]`
-          : "mt-[-47px] hidden sm:block sm:mr-[-.5%] md:mr-[-20px] border-[1px] sm:border-[#e0e0e0] rounded-none border-t-0 border-r-0"
+          : "mt-[-70px] md:mt-[-60px] hidden sm:block sm:mr-[-4%] betweenSmMd:pt-[50px] betweenSmMd:mr-[25px] md:mr-[-20px]  sm:border-[#e0e0e0] rounded-none border-t-0 border-r-0"
       }
       `}
       alt="Close menu"
