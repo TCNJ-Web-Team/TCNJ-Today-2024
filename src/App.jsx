@@ -41,7 +41,7 @@ function App() {
           <TakeoverNav />
           <div
             className="bg-white mx-auto lg:py-[100px] py-[50px] lg:px-0 px-[35px] md:max-w-[1130px] mdLgPadding relative
-            
+            pb-[200px] sm:pb-[50px]
             "
           >
             <AppListing appList={data} />

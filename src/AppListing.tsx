@@ -266,7 +266,13 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                           : "h-[55px]"
                       }`}
                     />
-                    <p>{item.name}</p>
+                    <p
+                      className={
+                        item.name === "Student Feedback" ? "w-[180px]" : ""
+                      }
+                    >
+                      {item.name}
+                    </p>
                   </motion.a>
                 ))}
               </div>
