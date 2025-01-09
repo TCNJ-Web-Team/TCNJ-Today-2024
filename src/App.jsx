@@ -11,14 +11,16 @@ import TakeoverNav from "./TakeoverNav.tsx";
 const topMenuIcons = data.filter((app) => app.topNav === true);
 
 function App() {
-  // const phpData = window.PHP_DATA;
-  const phpData = {
-    bannerImage:
-      "http://localhost:10057/wp-content/uploads/2024/12/parent-family-site-billboard-2-FINAL.jpg",
-    bannerLink: "https://tcnj.edu",
-    bannerAlt: "ALTERNATIVE TEST",
-  };
-  console.log(phpData);
+  // let phpData = null;
+  // const phpData = {
+  //   bannerImage:
+  //     "http://localhost:10057/wp-content/uploads/2024/12/parent-family-site-billboard-2-FINAL.jpg",
+  //   bannerLink: "https://tcnj.edu",
+  //   bannerAlt: "ALTERNATIVE TEST",
+  // };
+  const phpData = window.PHP_DATA;
+
+  // console.log(phpData);
   return (
     <>
       {/* <StaggeredList /> */}
@@ -50,13 +52,11 @@ function App() {
           <TakeoverNav />
           <div
             className={`bg-white mx-auto lg:py-[100px] py-[50px] lg:px-0 px-[35px] md:max-w-[1130px] mdLgPadding relative
-            pb-[200px] sm:pb-[50px]
-            ${
+            pb-[200px] sm:pb-[50px] ${
               phpData.bannerImage !== "" && phpData.bannerImage.length > 0
                 ? "lg:pt-[75px] pt-[15px]"
                 : ""
-            }
-            `}
+            } `}
           >
             <AppListing appList={data} />
             {/* PHP GOES HERE FOR BANNER */}
@@ -65,9 +65,7 @@ function App() {
               phpData.bannerImage.length > 0 && (
                 <div
                   id="banner-takeover"
-                  className="bg-white mx-auto px-[6px] relative
-                pt-[35px] lg:pt-[0px] pb-[15px] md:pb-[35px]
-           "
+                  className="bg-white mx-auto px-[6px] relative pt-[35px] lg:pt-[0px] pb-[15px] md:pb-[35px]"
                 >
                   {phpData.bannerLink ? (
                     <a href={phpData.bannerLink}>

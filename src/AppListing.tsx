@@ -268,7 +268,7 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                     />
                     <p
                       className={
-                        item.name === "Student Feedback" ? "w-[180px]" : ""
+                        item.name === "Student Feedback" ? "!w-[180px]" : ""
                       }
                     >
                       {item.name}
