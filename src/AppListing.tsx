@@ -71,7 +71,12 @@ const AppListing: React.FC<AppListingProps> = ({ appList }) => {
                   opacity: 1,
                   y: 0,
                   // Adds child stagger effect
-                  transition: { staggerChildren: 0.0651 },
+                  transition: {
+                    staggerChildren: window.matchMedia("(min-width: 640px)")
+                      .matches
+                      ? 0.0651
+                      : 0,
+                  },
                 },
               }}
               exit={{ opacity: 0, y: -10 }}
