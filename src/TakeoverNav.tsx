@@ -182,18 +182,21 @@ export default function TakeoverNav() {
                                 }}
                               />
                             ) : (
-                              <motion.a
-                                className="submenu-link-small text-left block font-domine font-[18px] leading-[25px] mb-[15px] sm:mb-[0px] sm:leading-[45px] md:font-[400] text-[#000000] md:text-[19px] md:leading-[50px] origin-top-left"
-                                href={item.url ?? "#"}
-                                key={item.title}
+                              <motion.div
                                 variants={{
                                   hidden: { opacity: 0, x: -15 },
                                   show: { opacity: 1, x: 0 },
                                 }}
                                 whileTap={{ scale: 0.98 }}
                               >
-                                {item.title}
-                              </motion.a>
+                                <a
+                                  className="submenu-link-small text-left block font-domine font-[18px] leading-[25px] mb-[15px] sm:mb-[0px] sm:leading-[45px] md:font-[400] text-[#000000] md:text-[19px] md:leading-[50px] origin-top-left"
+                                  href={item.url ?? "#"}
+                                  key={item.title}
+                                >
+                                  {item.title}
+                                </a>
+                              </motion.div>
                             )
                           )}
                         </motion.div>
