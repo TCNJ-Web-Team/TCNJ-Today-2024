@@ -11,14 +11,14 @@ import TakeoverNav from "./TakeoverNav.tsx";
 const topMenuIcons = data.filter((app) => app.topNav === true);
 
 function App() {
-  const phpData = window.PHP_DATA;
-  // const phpData = {
-  //   bannerImage:
-  //     "http://localhost:10057/wp-content/uploads/2024/12/parent-family-site-billboard-2-FINAL.jpg",
-  //   // bannerLink: "https://tcnj.edu",
-  //   bannerAlt: "ALTERNATIVE TEST",
-  // };
-  // console.log(phpData);
+  // const phpData = window.PHP_DATA;
+  const phpData = {
+    bannerImage:
+      "http://localhost:10057/wp-content/uploads/2024/12/parent-family-site-billboard-2-FINAL.jpg",
+    // bannerLink: "https://tcnj.edu",
+    bannerAlt: "ALTERNATIVE TEST",
+  };
+  console.log(phpData);
   return (
     <>
       {/* <StaggeredList /> */}
@@ -59,10 +59,18 @@ function App() {
               >
                 {phpData.bannerLink ? (
                   <a href={phpData.bannerLink}>
-                    <img src={phpData.bannerImage} alt={phpData.bannerAlt} />
+                    <img
+                      src={phpData.bannerImage}
+                      alt={phpData.bannerAlt}
+                      className="w-[100%]"
+                    />
                   </a>
                 ) : (
-                  <img src={phpData.bannerImage} alt={phpData.bannerAlt} />
+                  <img
+                    src={phpData.bannerImage}
+                    alt={phpData.bannerAlt}
+                    className="w-[100%]"
+                  />
                 )}
               </div>
             )}
