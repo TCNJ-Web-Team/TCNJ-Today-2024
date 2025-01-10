@@ -115,7 +115,10 @@ export default function TakeoverNav() {
     ${navCategory === index ? "sm:text-tcnjblue" : ""}`}
                           onMouseEnter={() => setCurrentCategory(index)} // Set the hover state
                           onMouseLeave={() => setCurrentCategory(null)} // Reset hover state
-                          whileTap={{ scale: 0.98 }}
+                          whileTap={{
+                            scale: 0.98,
+                            transformOrigin: "center center", // or "center center", "right center" etc.
+                          }}
                         >
                           {category.name}
 
@@ -153,7 +156,14 @@ export default function TakeoverNav() {
                             },
                             show: {
                               opacity: 1,
-                              transition: { staggerChildren: 0.0651 },
+                              // transition: { staggerChildren: 0.0651 },
+                              transition: {
+                                staggerChildren: window.matchMedia(
+                                  "(min-width: 640px)"
+                                ).matches
+                                  ? 0.0651
+                                  : 0,
+                              },
                               zIndex: 1,
                               height: "auto",
                             },
@@ -182,18 +192,24 @@ export default function TakeoverNav() {
                                 }}
                               />
                             ) : (
-                              <motion.a
-                                className="submenu-link-small text-left block font-domine font-[18px] leading-[25px] mb-[15px] sm:mb-[0px] sm:leading-[45px] md:font-[400] text-[#000000] md:text-[19px] md:leading-[50px] origin-top-left"
-                                href={item.url ?? "#"}
-                                key={item.title}
+                              <motion.div
                                 variants={{
                                   hidden: { opacity: 0, x: -15 },
                                   show: { opacity: 1, x: 0 },
                                 }}
-                                whileTap={{ scale: 0.98 }}
+                                // whileTap={{
+                                //   scale: 0.98,
+                                //   transformOrigin: "center center", // or "center center", "right center" etc.
+                                // }}
                               >
-                                {item.title}
-                              </motion.a>
+                                <a
+                                  className="submenu-link-small text-left block font-domine font-[18px] leading-[25px] mb-[15px] sm:mb-[0px] sm:leading-[45px] md:font-[400] text-[#000000] md:text-[19px] md:leading-[50px] origin-top-left"
+                                  href={item.url ?? "#"}
+                                  key={item.title}
+                                >
+                                  {item.title}
+                                </a>
+                              </motion.div>
                             )
                           )}
                         </motion.div>
