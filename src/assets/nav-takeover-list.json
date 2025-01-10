@@ -148,7 +148,7 @@
         "url": "https://academics.tcnj.edu/"
       },
       {
-        "title": "Areas of Study / Majors",
+        "title": "Undergraduate Programs",
         "url": "https://academics.tcnj.edu/undergraduate-study/"
       },
       {
@@ -234,6 +234,10 @@
         "url": "https://engineering.tcnj.edu/"
       },
       {
+        "title": "Graduate, Global, and Online Education",
+        "url": "https://ggoe.tcnj.edu/"
+      },
+      {
         "title": "Humanities and Social Sciences",
         "url": "https://hss.tcnj.edu/"
       },
@@ -265,8 +269,8 @@
         "url": "https://admissions.tcnj.edu/"
       },
       {
-        "title": "Graduate and Continuing Education",
-        "url": "https://graduate.tcnj.edu/apply/"
+        "title": "Graduate Admissions",
+        "url": "https://graduate.tcnj.edu/admissions/"
       },
       {
         "title": "Transfer Admissions",
@@ -342,7 +346,7 @@
       },
       {
         "title": "Conference and Events Services",
-        "url": "https://csms.tcnj.edu/"
+        "url": "https://ces.tcnj.edu/"
       },
       {
         "title": "large-break",
@@ -427,7 +431,7 @@
       },
       {
         "title": "Conference and Event Services",
-        "url": "https://guestevents.tcnj.edu/"
+        "url": "https://ces.tcnj.edu/"
       },
       {
         "title": "Finance and Business Services",

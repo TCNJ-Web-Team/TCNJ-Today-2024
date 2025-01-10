@@ -13,8 +13,7 @@ const topMenuIcons = data.filter((app) => app.topNav === true);
 function App() {
   // let phpData = null;
   // const phpData = {
-  //   bannerImage:
-  //     "http://localhost:10057/wp-content/uploads/2024/12/parent-family-site-billboard-2-FINAL.jpg",
+  //   bannerImage: "",
   //   bannerLink: "https://tcnj.edu",
   //   bannerAlt: "ALTERNATIVE TEST",
   // };
