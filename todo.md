@@ -1,3 +1,5 @@
+REMOVE APP AND MENU ANIMATIONS ON TABLET
+
 ## Meeting Notes 11-18-24
 
 - develop banner ad area
