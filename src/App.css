@@ -1,4 +1,8 @@
 @media (min-width: 1200px) and (max-width: 1249px) {
+  #banner-takeover {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
   .mdLgPadding {
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -12,5 +16,11 @@
     padding-right: 0px !important;
     margin-left: 35px !important;
     margin-right: 35px !important;
+  }
+}
+@media screen and (max-width: 549px) {
+  #banner-takeover {
+    padding-left: 6px;
+    padding-right: 6px;
   }
 }

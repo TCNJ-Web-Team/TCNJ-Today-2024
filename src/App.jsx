@@ -13,7 +13,8 @@ const topMenuIcons = data.filter((app) => app.topNav === true);
 function App() {
   // let phpData = null;
   // const phpData = {
-  //   bannerImage: "",
+  //   bannerImage:
+  //     "https://ceva3.tcnj.edu/wp-content/uploads/sites/3/2025/01/today-banner-2.jpg",
   //   bannerLink: "https://tcnj.edu",
   //   bannerAlt: "ALTERNATIVE TEST",
   // };
@@ -50,7 +51,7 @@ function App() {
         >
           <TakeoverNav />
           <div
-            className={`bg-white mx-auto lg:py-[100px] py-[20px] sm:py-[38px] lg:px-0 px-[14px] sm:px-[29px] md:max-w-[1130px] mdLgPadding relative
+            className={`bg-white mx-auto lg:py-[100px] py-[14px] sm:py-[38px] lg:px-0 px-[14px] sm:px-[29px] md:max-w-[1130px] mdLgPadding relative
             pb-[200px] sm:pb-[50px] ${
               phpData.bannerImage !== "" && phpData.bannerImage.length > 0
                 ? "lg:pt-[75px] pt-[20px] sm:pt-[35px]"
@@ -64,7 +65,10 @@ function App() {
               phpData.bannerImage.length > 0 && (
                 <div
                   id="banner-takeover"
-                  className="bg-white mx-auto px-[6px] relative pt-[0] sm:pt-[0] lg:pt-[0px] pb-[15px] md:pb-[35px]"
+                  className="bg-white mx-auto 
+                relative pt-[0] sm:pt-[0] lg:pt-[0px] pb-[15px] md:pb-[35px]
+                
+                "
                 >
                   {phpData.bannerLink ? (
                     <a href={phpData.bannerLink}>
