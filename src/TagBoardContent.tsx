@@ -41,7 +41,11 @@ const TagBoardContent: React.FC = () => {
   }, []);
 
   return (
-    <div id="tagboard-content">
+    <div
+      id="tagboard-content"
+      className="mt-0 ml-0 mr-0 sm:mt-[-12px] sm:ml-[-6px] sm:mr-[-6px]
+      betweenLgMdSmall:px-[38px] lg:px-0"
+    >
       {/* Loading message */}
       {/* {!isTagboardLoaded && <p>Loading Tagboard content...</p>} */}
       {/* Tagboard embed will load here */}

@@ -98,6 +98,11 @@ export default function GlobalFooter() {
                   <a href="https://engineering.tcnj.edu/">Engineering</a>
                 </li>
                 <li>
+                  <a href="https://ggoe.tcnj.edu/">
+                    Graduate, Global, and Online Education
+                  </a>
+                </li>
+                <li>
                   <a href="https://hss.tcnj.edu/">
                     Humanities &amp; Social Sciences
                   </a>

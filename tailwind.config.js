@@ -7,6 +7,8 @@ export default {
       screens: {
         xl: "1920px", // Custom size for extra-large screens
         lg: "1250px", // Custom size for large screens
+        betweenLgMdSmall: { min: "1200px", max: "1250px" },
+        betweenLgMdXSmall: { min: "900px", max: "1130px" },
         betweenLgMd: { min: "900px", max: "1250px" },
 
         md: "900px", // Custom size for medium screens

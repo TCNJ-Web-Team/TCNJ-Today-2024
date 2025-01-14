@@ -28,16 +28,23 @@ $domine: "Domine", serif;
 .global-footer-2022 {
   background-color: $dark-tcnj-blue;
   width: 100%;
-  padding: 40px 0 20px;
+  padding: 50px 0 20px;
   .inner-width {
     max-width: 1128px;
 
     margin: 0 auto;
     width: 100%;
+    hr {
+      @media screen and (max-width: $lg) {
+        margin-left: 30px !important;
+        margin-right: 30px !important;
+      }
+    }
   }
   .bottom-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
     @media screen and (max-width: $lg) {
       flex-direction: column;
       align-items: center;
@@ -59,8 +66,11 @@ $domine: "Domine", serif;
     }
     .copyright {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
+      gap: 15px;
+      justify-content: flex-start;
       @media screen and (max-width: $lg) {
+        gap: 0px;
         flex-direction: column;
         align-items: center;
       }
@@ -76,7 +86,10 @@ $domine: "Domine", serif;
   .grid-wrapper {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    align-items: center;
+    // align-items: center;
+    align-items: start;
+    margin-bottom: 30px;
+    justify-content: space-between;
     @media screen and (max-width: $lg) {
       display: flex;
       flex-wrap: wrap;
@@ -165,7 +178,10 @@ $domine: "Domine", serif;
     font-size: 14px;
     // line-height: 42.21px;
     text-align: center;
-    color: #9bd0f3;
+    color: #9bd0f3 !important;
+    @media screen and (min-width: $lg) {
+      margin-left: 10px;
+    }
     // margin: 20px;
   }
 }
