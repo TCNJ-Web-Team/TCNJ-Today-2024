@@ -158,8 +158,10 @@ export default function TakeoverNav() {
                               opacity: 1,
                               // transition: { staggerChildren: 0.0651 },
                               transition: {
+                                // staggerChildren: window.matchMedia(
+                                //   "(min-width: 640px)"
                                 staggerChildren: window.matchMedia(
-                                  "(min-width: 640px)"
+                                  "(min-width: 1050px)"
                                 ).matches
                                   ? 0.0651
                                   : 0,
