@@ -59,3 +59,11 @@
 #tagboard-content {
   min-height: 800px;
 }
+:root :where(p) {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: inherit;
+  margin-bottom: inherit;
+}
