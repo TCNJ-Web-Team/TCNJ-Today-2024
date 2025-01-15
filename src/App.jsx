@@ -12,13 +12,13 @@ const topMenuIcons = data.filter((app) => app.topNav === true);
 
 function App() {
   // let phpData = null;
-  const phpData = {
-    bannerImage:
-      "https://ceva3.tcnj.edu/wp-content/uploads/sites/3/2025/01/today-banner-2.jpg",
-    bannerLink: "https://tcnj.edu",
-    bannerAlt: "ALTERNATIVE TEST",
-  };
-  // const phpData = window.PHP_DATA;
+  // const phpData = {
+  //   bannerImage:
+  //     "https://ceva3.tcnj.edu/wp-content/uploads/sites/3/2025/01/today-banner-2.jpg",
+  //   bannerLink: "https://tcnj.edu",
+  //   bannerAlt: "ALTERNATIVE TEST",
+  // };
+  const phpData = window.PHP_DATA;
 
   // console.log(phpData);
   return (
