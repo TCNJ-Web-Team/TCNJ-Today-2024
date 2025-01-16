@@ -1,4 +1,5 @@
 REMOVE APP AND MENU ANIMATIONS ON TABLET
+Add social
 
 ## Meeting Notes 11-18-24
 
