@@ -28,7 +28,8 @@
     transform: translateX(-50%);
     width: 100%;
   }
-  @media (min-width: 550px) {
+  // Only apply hover effects on devices that support hover
+  @media (hover: hover) and (pointer: fine) {
     &:hover {
       .outline-icon {
         opacity: 0;
@@ -37,9 +38,16 @@
       .color-icon {
         opacity: 1;
       }
-      // p {
-      //   text-decoration: underline;
-      // }
+    }
+  }
+
+  // For touch devices, always show one version of the icon
+  @media (hover: none) and (pointer: coarse) {
+    .outline-icon {
+      opacity: 1;
+    }
+    .color-icon {
+      display: none; // Remove the color icon entirely on touch devices
     }
   }
 }
@@ -58,4 +66,12 @@
 }
 #tagboard-content {
   min-height: 800px;
+}
+:root :where(p) {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: inherit;
+  margin-bottom: inherit;
 }
