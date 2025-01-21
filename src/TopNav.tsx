@@ -103,9 +103,15 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
               opacity: 0,
             },
             hover: {
-              width: "100%",
+              width: window.matchMedia("(hover: hover) and (pointer: fine)")
+                .matches
+                ? "100%"
+                : 0,
               backgroundColor: "#000",
-              opacity: 1,
+              opacity: window.matchMedia("(hover: hover) and (pointer: fine)")
+                .matches
+                ? 1
+                : 0,
             },
             active: {
               // Add active variant
@@ -114,7 +120,13 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
               opacity: 1,
             },
           }}
-          transition={{ duration: 0.35, ease: "easeInOut" }}
+          transition={{
+            duration: window.matchMedia("(hover: hover) and (pointer: fine)")
+              .matches
+              ? 0.35
+              : 0.2,
+            ease: "easeInOut",
+          }}
         />
       </motion.a>
       <motion.a
@@ -146,9 +158,15 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
               opacity: 0,
             },
             hover: {
-              width: "100%",
+              width: window.matchMedia("(hover: hover) and (pointer: fine)")
+                .matches
+                ? "100%"
+                : 0,
               backgroundColor: "#000",
-              opacity: 1,
+              opacity: window.matchMedia("(hover: hover) and (pointer: fine)")
+                .matches
+                ? 1
+                : 0,
             },
             active: {
               // Add active variant
@@ -157,7 +175,13 @@ const TopNav: React.FC<TopNavProps> = ({ topNavItems }) => {
               opacity: 1,
             },
           }}
-          transition={{ duration: 0.35, ease: "easeInOut" }}
+          transition={{
+            duration: window.matchMedia("(hover: hover) and (pointer: fine)")
+              .matches
+              ? 0.35
+              : 0.2,
+            ease: "easeInOut",
+          }}
         />
       </motion.a>
     </div>

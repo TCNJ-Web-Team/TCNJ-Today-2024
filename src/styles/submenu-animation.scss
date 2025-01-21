@@ -16,25 +16,26 @@
   position: relative;
   display: inline-block; // Ensure the element is inline for proper border animation
   //   padding-bottom: 5px; // Adjust based on your design needs
-
-  // Create a pseudo-element for the border
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    height: 1px; // Border thickness
-    width: 0;
-    background-color: black; // Border color
-    transition: width 0.35s; // Animation duration
-    @media screen and (max-width: 550px) {
-      bottom: 0px;
+  @media (hover: hover) and (pointer: fine) {
+    // Create a pseudo-element for the border
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      height: 1px; // Border thickness
+      width: 0;
+      background-color: black; // Border color
+      transition: width 0.35s; // Animation duration
+      @media screen and (max-width: 550px) {
+        bottom: 0px;
+      }
     }
-  }
 
-  // Add a hover effect to animate the border
-  &:hover::before {
-    width: 100%;
+    // Add a hover effect to animate the border
+    &:hover::before {
+      width: 100%;
+    }
   }
 }
 .top-open {
