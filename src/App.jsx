@@ -14,9 +14,13 @@ function App() {
   // let phpData = null;
   // const phpData = {
   //   bannerImage:
-  //     "https://ceva3.tcnj.edu/wp-content/uploads/sites/3/2025/01/today-banner-2.jpg",
-  //   bannerLink: "https://tcnj.edu",
-  //   bannerAlt: "ALTERNATIVE TEST",
+  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-desktop.jpg",
+  //   bannerImageTablet:
+  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-tablet.jpg",
+  //   bannerImageMobile:
+  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-mobile.jpg",
+  //   bannerLink: "https://dayofgiving.tcnj.edu/pages/home-2164",
+  //   bannerAlt: "Takeover Banner",
   // };
   const phpData = window.PHP_DATA;
 
@@ -71,19 +75,47 @@ function App() {
                 "
                 >
                   {phpData.bannerLink ? (
-                    <a href={phpData.bannerLink}>
+                    <a href={phpData.bannerLink} target="_blank">
+                      <picture>
+                        {phpData.bannerImageMobile && (
+                          <source
+                            media="(max-width: 430px)"
+                            srcSet={phpData.bannerImageMobile}
+                          />
+                        )}
+                        {phpData.bannerImageTablet && (
+                          <source
+                            media="(max-width: 820px)"
+                            srcSet={phpData.bannerImageTablet}
+                          />
+                        )}
+                        <img
+                          src={phpData.bannerImage}
+                          alt={phpData.bannerAlt}
+                          className="w-[100%]"
+                        />
+                      </picture>
+                    </a>
+                  ) : (
+                    <picture>
+                      {phpData.bannerImageMobile && (
+                        <source
+                          media="(max-width: 430px)"
+                          srcSet={phpData.bannerImageMobile}
+                        />
+                      )}
+                      {phpData.bannerImageTablet && (
+                        <source
+                          media="(max-width: 820px)"
+                          srcSet={phpData.bannerImageTablet}
+                        />
+                      )}
                       <img
                         src={phpData.bannerImage}
                         alt={phpData.bannerAlt}
                         className="w-[100%]"
                       />
-                    </a>
-                  ) : (
-                    <img
-                      src={phpData.bannerImage}
-                      alt={phpData.bannerAlt}
-                      className="w-[100%]"
-                    />
+                    </picture>
                   )}
                 </div>
               )}
