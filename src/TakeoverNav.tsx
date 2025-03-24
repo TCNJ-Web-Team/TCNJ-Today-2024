@@ -161,7 +161,7 @@ export default function TakeoverNav() {
                                 // staggerChildren: window.matchMedia(
                                 //   "(min-width: 640px)"
                                 staggerChildren: window.matchMedia(
-                                  "(min-width: 1050px)"
+                                  "(hover: hover) and (pointer: fine)"
                                 ).matches
                                   ? 0.0651
                                   : 0,

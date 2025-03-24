@@ -1,40 +1,45 @@
 import { useState, useEffect } from "react";
-// import "../styles/accordion-styles.scss";
 import "./styles/global-nav.scss";
 
 export default function GlobalHeader() {
   const [open, setOpen] = useState(false);
-  const openSideNav = () => {
+
+  const openSideNav = (e) => {
+    e.stopPropagation(); // Prevent event from bubbling up
     setOpen(!open);
   };
+
+  const handleClickOutside = (e) => {
+    // Only close if clicking the overlay area (slider-container) but not the navigation content
+    if (e.target.id === "slider-container") {
+      setOpen(false);
+    }
+  };
+
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.key === "Escape") {
         setOpen(false);
-        // console.log("test key");
       }
     };
 
     if (open) {
-      // Attach the event listener
       document.addEventListener("keydown", handleKeyPress);
     } else {
-      // Detach the event listener
       document.removeEventListener("keydown", handleKeyPress);
     }
 
-    // Clean up the event listener when the component unmounts
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
     };
-  }, [open]); // Dependency on 'open' ensures the effect is re-run when 'open' changes
+  }, [open]);
 
   return (
     <>
       <div className="global-nav">
         <div
           id="slider-container"
-          onClick={openSideNav}
+          onClick={handleClickOutside}
           className={open ? "open" : ""}
         >
           <img
@@ -180,15 +185,6 @@ export default function GlobalHeader() {
           </div>
         </div>
       </div>
-
-      {/* <div id="site-header">
-        <div id="site-title" className="inner">
-          <a id="parent-site"></a>
-        </div>
-        <div id="site-nav">
-          <div className="inner"></div>
-        </div>
-      </div> */}
     </>
   );
 }
