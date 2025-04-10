@@ -24,7 +24,7 @@ function App() {
   // };
   const phpData = window.PHP_DATA;
 
-  console.log(phpData);
+  // console.log(phpData);
   return (
     <>
       {/* <StaggeredList /> */}
