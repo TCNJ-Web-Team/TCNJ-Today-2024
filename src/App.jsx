@@ -12,17 +12,17 @@ const topMenuIcons = data.filter((app) => app.topNav === true);
 
 function App() {
   // let phpData = null;
-  // const phpData = {
-  //   bannerImage:
-  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-desktop.jpg",
-  //   bannerImageTablet:
-  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-tablet.jpg",
-  //   bannerImageMobile:
-  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-mobile.jpg",
-  //   bannerLink: "https://dayofgiving.tcnj.edu/pages/home-2164",
-  //   bannerAlt: "Takeover Banner",
-  // };
-  const phpData = window.PHP_DATA;
+  const phpData = {
+    bannerImage:
+      "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-desktop.jpg",
+    bannerImageTablet:
+      "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-tablet.jpg",
+    bannerImageMobile:
+      "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-mobile.jpg",
+    bannerLink: "https://dayofgiving.tcnj.edu/pages/home-2164",
+    bannerAlt: "Takeover Banner",
+  };
+  // const phpData = window.PHP_DATA;
 
   // console.log(phpData);
   return (
