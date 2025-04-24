@@ -19,17 +19,17 @@ function App() {
   const handleDisplaySearch = () => {
     setDisplaySearch(!displaySearch);
   };
-  const phpData = {
-    bannerImage:
-      "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-desktop.jpg",
-    bannerImageTablet:
-      "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-tablet.jpg",
-    bannerImageMobile:
-      "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-mobile.jpg",
-    bannerLink: "https://dayofgiving.tcnj.edu/pages/home-2164",
-    bannerAlt: "Takeover Banner",
-  };
-  // const phpData = window.PHP_DATA;
+  // const phpData = {
+  //   bannerImage:
+  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-desktop.jpg",
+  //   bannerImageTablet:
+  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-tablet.jpg",
+  //   bannerImageMobile:
+  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-mobile.jpg",
+  //   bannerLink: "https://dayofgiving.tcnj.edu/pages/home-2164",
+  //   bannerAlt: "Takeover Banner",
+  // };
+  const phpData = window.PHP_DATA;
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -57,7 +57,7 @@ function App() {
         {displaySearch && (
           <motion.div
             id="search-overlay"
-            className="fixed inset-0 flex items-center justify-center bg-[rgba(0,0,0,0.6)] z-[100000000]  backdrop-blur-sm "
+            className="cursor-pointer fixed inset-0 flex items-center justify-center bg-[rgba(0,0,0,0.6)] z-[100000000]  backdrop-blur-sm "
             onClick={handleDisplaySearch}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
