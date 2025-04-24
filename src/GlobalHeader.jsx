@@ -178,6 +178,11 @@ export default function GlobalHeader() {
 
             <img
               id="open-sidebar-button"
+              src="https://today.tcnj.edu/custom/tcnj-today/search-icon.svg"
+              alt="Global Nav Menu"
+            />
+            <img
+              id="open-sidebar-button"
               src="https://brand.tcnj.edu/wp-content/uploads/sites/11/2023/07/menu-icon.svg"
               alt="Global Nav Menu"
               onClick={openSideNav}
