@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import "./styles/global-nav.scss";
+import { motion, AnimatePresence } from "framer-motion";
 
-export default function GlobalHeader() {
+export default function GlobalHeader({ displaySearch, handleDisplaySearch }) {
   const [open, setOpen] = useState(false);
 
   const openSideNav = (e) => {
@@ -35,7 +37,66 @@ export default function GlobalHeader() {
   }, [open]);
 
   return (
-    <>
+    <div className="bg-tcnjblue">
+      <AnimatePresence>
+        {displaySearch && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="overflow-hidden relative z-[100000001]"
+          >
+            <motion.div
+              initial={{ y: -20 }}
+              animate={{ y: 0 }}
+              exit={{ y: -20 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="bg-tcnjblue z-[100000001]"
+            >
+              <div
+                id="top-search-bar"
+                className="bg-tcnjblue mx-auto py-[15px] max-w-[1130px] px-[36px] lg:px-0 relative"
+              >
+                <form
+                  id="cse-search-box"
+                  action="//tcnj.edu/search/"
+                  className="bg-transparent flex items-center"
+                >
+                  <label className="visually-hidden " htmlFor="g-search">
+                    Search
+                  </label>
+                  <input
+                    type="hidden"
+                    name="cx"
+                    value="016215932862171572185:xlzcmqlxfr0"
+                  />
+                  <input type="hidden" name="cof" value="FORID:10" />
+                  <input type="hidden" name="ie" value="UTF-8" />
+                  <input type="hidden" name="hq" value="-inurl:https" />
+                  <input
+                    id="g-search"
+                    type="text"
+                    name="q"
+                    className="search-icon bg-transparent text-[26px] text-white font-opensans w-full border-[0px] border-b-[1px] border-darklinkblue rounded-[5px] px-[20px] py-[10px] focus:outline-none focus:border-darklinkblue focus:ring-1 focus:ring-darklinkblue"
+                    placeholder="Search tcnj.edu"
+                  />
+                  <input
+                    id="SearchButton"
+                    type="submit"
+                    name="sa"
+                    value=""
+                    className="absolute right-[60px] lg:right-[20px] w-[15px] h-[15px] bg-no-repeat bg-center bg-contain cursor-pointer"
+                    style={{
+                      backgroundImage: `url('https://today.tcnj.edu/custom/tcnj-today/search-icon.svg')`,
+                    }}
+                  />
+                </form>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="global-nav">
         <div
           id="slider-container"
@@ -171,6 +232,12 @@ export default function GlobalHeader() {
             </a>
             <a
               className="desktop-global-nav-item"
+              href="https://eawebprod.tcnj.edu/directory/"
+            >
+              Directory
+            </a>
+            <a
+              className="desktop-global-nav-item"
               href="https://tcnj.edu/administration/"
             >
               Offices
@@ -180,6 +247,7 @@ export default function GlobalHeader() {
               id="open-sidebar-button"
               src="https://today.tcnj.edu/custom/tcnj-today/search-icon.svg"
               alt="Global Nav Menu"
+              onClick={handleDisplaySearch}
             />
             <img
               id="open-sidebar-button"
@@ -190,6 +258,6 @@ export default function GlobalHeader() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
