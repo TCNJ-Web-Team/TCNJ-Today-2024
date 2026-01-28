@@ -1,4 +1,5 @@
 // import "./App.css";
+import { useState, useEffect } from "react";
 import GlobalFooter from "./GlobalFooter.jsx";
 import GlobalHeader from "./GlobalHeader.jsx";
 import TagBoardContent from "./TagBoardContent.tsx";
@@ -7,24 +8,65 @@ import data from "./assets/app-list.json";
 import "./App.css";
 import AppListing from "./AppListing.tsx";
 import TakeoverNav from "./TakeoverNav.tsx";
+import { motion, AnimatePresence } from "framer-motion";
+
 // import StaggeredList from "./StaggeredTest.tsx";
 const topMenuIcons = data.filter((app) => app.topNav === true);
 
 function App() {
   // let phpData = null;
+  const [displaySearch, setDisplaySearch] = useState(false);
+  const handleDisplaySearch = () => {
+    setDisplaySearch(!displaySearch);
+  };
   // const phpData = {
   //   bannerImage:
-  //     "https://ceva3.tcnj.edu/wp-content/uploads/sites/3/2025/01/today-banner-2.jpg",
-  //   bannerLink: "https://tcnj.edu",
-  //   bannerAlt: "ALTERNATIVE TEST",
+  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-desktop.jpg",
+  //   bannerImageTablet:
+  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-tablet.jpg",
+  //   bannerImageMobile:
+  //     "http://localhost:10057/wp-content/uploads/2025/03/TCNJ-Today-banner-mobile.jpg",
+  //   bannerLink: "https://dayofgiving.tcnj.edu/pages/home-2164",
+  //   bannerAlt: "Takeover Banner",
   // };
   const phpData = window.PHP_DATA;
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setDisplaySearch(false);
+      }
+    };
 
+    if (displaySearch) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [displaySearch]);
   // console.log(phpData);
   return (
     <>
       {/* <StaggeredList /> */}
-      <GlobalHeader />
+      <GlobalHeader
+        displaySearch={displaySearch}
+        handleDisplaySearch={handleDisplaySearch}
+      />
+      <AnimatePresence>
+        {displaySearch && (
+          <motion.div
+            id="search-overlay"
+            className="cursor-pointer fixed inset-0 flex items-center justify-center bg-[rgba(0,0,0,0.6)] z-[100000000]  backdrop-blur-sm "
+            onClick={handleDisplaySearch}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          />
+        )}
+      </AnimatePresence>
+
       <div id="today-container" className="bg-tcnjyellow">
         <div
           id="top"
@@ -71,19 +113,47 @@ function App() {
                 "
                 >
                   {phpData.bannerLink ? (
-                    <a href={phpData.bannerLink}>
+                    <a href={phpData.bannerLink} target="_blank">
+                      <picture>
+                        {phpData.bannerImageMobile && (
+                          <source
+                            media="(max-width: 430px)"
+                            srcSet={phpData.bannerImageMobile}
+                          />
+                        )}
+                        {phpData.bannerImageTablet && (
+                          <source
+                            media="(max-width: 820px)"
+                            srcSet={phpData.bannerImageTablet}
+                          />
+                        )}
+                        <img
+                          src={phpData.bannerImage}
+                          alt={phpData.bannerAlt}
+                          className="w-[100%]"
+                        />
+                      </picture>
+                    </a>
+                  ) : (
+                    <picture>
+                      {phpData.bannerImageMobile && (
+                        <source
+                          media="(max-width: 430px)"
+                          srcSet={phpData.bannerImageMobile}
+                        />
+                      )}
+                      {phpData.bannerImageTablet && (
+                        <source
+                          media="(max-width: 820px)"
+                          srcSet={phpData.bannerImageTablet}
+                        />
+                      )}
                       <img
                         src={phpData.bannerImage}
                         alt={phpData.bannerAlt}
                         className="w-[100%]"
                       />
-                    </a>
-                  ) : (
-                    <img
-                      src={phpData.bannerImage}
-                      alt={phpData.bannerAlt}
-                      className="w-[100%]"
-                    />
+                    </picture>
                   )}
                 </div>
               )}
