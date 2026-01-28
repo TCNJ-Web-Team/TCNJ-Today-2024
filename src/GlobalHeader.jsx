@@ -209,7 +209,7 @@ export default function GlobalHeader({ displaySearch, handleDisplaySearch }) {
           <a style={{ display: "flex" }} href="https://tcnj.edu/">
             <img
               id="tcnj-logo"
-              src="https://graduate.tcnj.edu/explore-programs/_nuxt/img/tcnj-logo.3f4bf41.svg"
+              src="https://tcnj.edu/custom/brand/nav/tcnj-logo-header.svg"
               alt="TCNJ"
             />
           </a>
