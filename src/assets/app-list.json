@@ -82,7 +82,7 @@
   {
     "id": 10,
     "name": "Roar",
-    "url": "https://tcnj.campusapp.com/",
+    "url": "https://tcnj.campusgroups.com/home_login",
     "topNav": false,
     "popular": false,
     "portal": false
@@ -250,6 +250,18 @@
     "id": 32,
     "name": "Paw Print",
     "url": "https://pawprint.tcnj.edu",
+    "topNav": false
+  },
+  {
+    "id": 33,
+    "name": "Canva",
+    "url": "https://www.canva.com/login/sso/f3e53a0e-7133-4b84-9a8b-f2a7ebec0b59",
+    "topNav": false
+  },
+  {
+    "id": 34,
+    "name": "CARS",
+    "url": "https://tcnj.aimsparking.com/",
     "topNav": false
   }
 ]
